@@ -1,0 +1,23 @@
+.section-404 {
+  .content {
+
+  }
+}
+  .wrap-404 {
+    text-align: center;
+    padding: 0;
+    color: $color-text;
+    font-size: 75px;
+    line-height: $line-height-heading-2;
+    .error-404 {
+      display: block;
+      margin-bottom: -35px;
+      @include font($bold, 200px, $font-secondary, $line-height-heading);
+    }
+    @media all and (max-width: 768px) {
+      font-size: 60px;
+      .error-404 {
+        font-size: 160px;
+      }
+    }
+  }

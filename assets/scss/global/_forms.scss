@@ -1,0 +1,120 @@
+.input-style {
+  display: block;
+  width: 100%;
+  min-height: 57px;
+  height: auto;
+  margin: 0;
+  padding: 10px 0;
+  @include font($normal, 16px, $font-secondary, 1);
+  color: $white;
+  background-color: transparent;
+  border: 2px solid $white;
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  @include border-radius(0);
+  @include transition($transition-other);
+}
+
+textarea.input-style {
+  overflow-y: auto;
+  resize: none;
+  padding: 15px 0;
+  //width: 100%;
+  height: 277px;
+  line-height: $line-height;
+  //color: $white;
+  //@include font($normal, 16px, $font-secondary, $line-height);
+  //border: 1px solid $white;
+  //border-left: none;
+  //border-right: none;
+  //box-shadow: none;
+  //-webkit-appearance: none;
+  //-moz-appearance: none;
+  //appearance: none;
+  //@include border-radius(0);
+  @media all and (max-width: 768px) {
+    height: 160px;
+  }
+}
+
+input::-webkit-input-placeholder {
+  font-family: $font-secondary;
+  font-weight: $normal;
+  color: $white;
+  @include transition($transition-other);
+}
+input::-moz-placeholder {
+  font-family: $font-secondary;
+  font-weight: $normal;
+  color: $white;
+  @include transition($transition-other);
+}
+
+input:-ms-input-placeholder {
+  font-family: $font-secondary;
+  font-weight: $normal;
+  color: $white;
+  @include transition($transition-other);
+}
+//input#email_address_0:-moz-placeholder,
+input:-moz-placeholder {
+  font-family: $font-secondary;
+  font-weight: $normal;
+  color: $white;
+  @include transition($transition-other);
+}
+//
+textarea::-webkit-input-placeholder {
+  font-family: $font-secondary;
+  font-weight: $normal;
+  color: $white;
+  @include transition($transition-other);
+}
+
+textarea::-moz-placeholder {
+  font-family: $font-secondary;
+  font-weight: $normal;
+  color: $white;
+  @include transition($transition-other);
+}
+
+textarea:-ms-input-placeholder {
+  font-family: $font-secondary;
+  font-weight: $normal;
+  color: $white;
+  @include transition($transition-other);
+}
+
+textarea:-moz-placeholder {
+  font-family: $font-secondary;
+  font-weight: $normal;
+  color: $white;
+  @include transition($transition-other);
+}
+
+span.wpcf7-not-valid-tip {
+  font-size: 22px;
+}
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing,
+div.wpcf7-response-output,
+div.wpcf7-mail-sent-ok {
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
+}
+div.wpcf7-response-output {
+  //background-color: #ff0000;
+}
+div.wpcf7-mail-sent-ok {
+  background-color: #398f14;
+}
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+  border-color: #c3ba38;
+  background-color: #c3ba38;
+}

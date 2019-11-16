@@ -1,0 +1,82 @@
+#footer {
+  padding: 76px 0;
+  color: $color-text3;
+  background-color: $color-bg4;
+  .container {
+    .column {
+      &:first-child:not(.partners) {
+        width: $width-col-7;
+        &:not(:only-child) {
+          @media all and (max-width: 768px) {
+            padding-top: 20px;
+          }
+        }
+      }
+      &.partners {
+        width: $width-col-5;
+        &:not(:only-child){
+          padding-left: 40px;
+          text-align: right;
+          @media all and (max-width: 768px) {
+            display: table-header-group;
+            width: 100%;
+            padding-left: 0;
+            text-align: left;
+          }
+        }
+      }
+    }
+    @media all and (max-width: 768px) {
+      //.row-table {
+      //  display: block;
+      //}
+      //.column {
+      //  display: block;
+      //  width: 100%;
+      //}
+    }
+  }
+  .content {
+    margin-bottom: 24px;
+    @include font($normal, $size-small, $font-secondary, 1.5);
+    @media all and (max-width: 768px) {
+      font-size: $size-smaller;
+    }
+  }
+}
+
+  .copyright {
+    margin-bottom: 20px;
+    color: $color-text3;
+    @include font($normal, $size-small, $font-secondary, 1.5);
+    @media all and (max-width: 768px) {
+      font-size: $size-smaller;
+    }
+  }
+  .partners-list {
+    display: inline-block;
+    max-width: 415px;
+    width: 100%;
+    text-align: left;
+    > li {
+      display: block;
+      max-width: 300px;
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+      }
+      a {
+        display: block;
+        @media all and (min-width: 769px) {
+          &:hover, &:focus {
+           opacity: .7;
+          }
+        }
+      }
+    }
+  }

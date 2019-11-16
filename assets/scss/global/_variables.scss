@@ -1,0 +1,69 @@
+/*fonts*/
+$font-main: 'Source Sans Pro', sans-serif;
+$font-secondary: 'Source Code Pro', monospace;
+
+/*fonts-weight*/
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+/*fonts-size*/
+//$size-12: 12px;
+$size-smaller: 16px;
+$size-small: 18px;
+$size-main: 20px;
+$size-big: 24px;
+$size-biggest: 36px;
+
+$size-heading1: 64px;
+$size-heading2: 56px;
+$size-heading3: 36px;
+$size-heading4: 32px;
+$size-heading5: 28px;
+$size-heading6: 20px;
+
+/*line-height*/
+$line-height: 1.6;
+$line-height-heading: 1;
+$line-height-heading-2: 1.25;
+
+
+/*colors*/
+$white: #ffffff;
+$black: #000000;
+$color-text: #53575A;
+$color-text2: #0066BA;
+$color-text3: #002755;
+//$color-text4: #002755;
+
+$color-bg1: $white;
+$color-bg2: #0066BA;
+$color-bg3: #002755;
+$color-bg4: #D9F0FA;
+
+/*transition*/
+$transition-link: 0.2s;
+$transition-other: 0.35s;
+
+/*border-radius*/
+$radius-main: 10px;
+$radius-small: 5px;
+
+//columns - grid - for custom layouts
+$col: 8.333333333%;
+$gutter: 20px;
+
+$width-col-1: 100% / 12;
+$width-col-2: 100% / 6;
+$width-col-3: 100% / 4;
+$width-col-4: 100% / 3;
+$width-col-5: 100% / 2.4;
+$width-col-6: 100% / 2;
+$width-col-7: 100% / 1.714285714285714;
+$width-col-8: 100% / 1.5;
+$width-col-9: 100% / 1.333333333333333;
+$width-col-10: 100% / 1.2;
+$width-col-11: 100% / 1.090909090909091;
+$width-col-12: 100%;
+

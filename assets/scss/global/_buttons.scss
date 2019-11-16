@@ -1,0 +1,40 @@
+.btn, a.btn {
+  position: relative;
+  display: inline-block;
+  min-width: 157px;
+  max-width: 100%;
+  padding: 8px 12px;
+  @include font($semi-bold, 18px, $font-secondary, 1.2);
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  border: 1px solid $color-bg2;
+  background-color: $color-bg2;
+  span {
+    color: $color-text2;
+  }
+  @media all and (max-width: 768px) {
+    min-width: 200px;
+    padding: 22px 20px;
+    font-size: 14px;
+  }
+  @media all and (min-width: 769px) {
+    &:hover, &:focus {
+      background-color: #4b2936;
+      text-decoration: none;
+    }
+  }
+  &.btn-jump-to-content, a.btn-jump-to-content {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    z-index: -9999;
+    opacity: 0;
+    @include css3-prefix('transform', 'translateX(-50%)');
+    &:focus {
+      opacity: 1;
+      z-index: 99999;
+    }
+  }
+}
