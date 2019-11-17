@@ -1,0 +1,9 @@
+.idea
+.sass-cache/
+.sass-cache
+assets/scss/.sass-cache
+assets/scss/.sass-cache/
+assets/css/screen.css
+assets/css/screen.css.map
+html/
+sftp-config.json

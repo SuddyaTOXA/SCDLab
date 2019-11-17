@@ -2,6 +2,7 @@
 @import 'global/mixins';
 
 /*import global styles */
+//@import 'global/app';
 @import 'global/global';
 @import 'global/buttons';
 @import 'global/forms';
@@ -13,3 +14,4 @@
 /* styles used throughout site */
 @import 'partials/home';
 @import 'partials/404';
+

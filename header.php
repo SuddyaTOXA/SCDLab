@@ -10,7 +10,7 @@
 
 <body <?php body_class(); ?>>
     <div class="wrapper">
-        <a class="btn btn-jump-to-content smooth-scroll" href="#main-content" title="<?php esc_attr_e('Skip Navigation', 'scd-lab'); ?>"><?php _e('Skip Navigation', 'scd-lab'); ?></a>
+        <div id="skip-to-content"><a href="#main-content" title="<?php esc_attr_e('Skip to Main Content', 'scd-lab'); ?>" ><?php _e('Skip to Main Content', 'scd-lab'); ?></a></div>
 
         <header id="header" class="header">
             <div class="container">
