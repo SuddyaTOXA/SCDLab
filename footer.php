@@ -1,68 +1,70 @@
         </div>
         <?php
         $footer_about = get_field('about','option') ? get_field('about','option') : '';
-//        $partners     = get_field('partners','option');
+        $footer_logo  = get_field('footer_logo','option');
+        $footer_logo_id = '';
+
+        if ($footer_logo && is_array($footer_logo) && count($footer_logo) > 0) {
+	        $footer_logo_id = $footer_logo['ID'];
+        }
 
         $current_year = date("Y");
         $copyright = '';
 
         if ($current_year > 2019) {
-            $copyright = '© Copyright 2019 - '.$current_year. __('by Foundation for', 'scd-lab') . 'California Community Colleges';
+            $copyright = '© Copyright 2019 - '.$current_year. ' by <a href="#" title="Foundation for California Community Colleges">Foundation for California Community Colleges</a>';
         } else {
-            $copyright = '© Copyright 2019 '. __('by Foundation for', 'scd-lab') . 'California Community Colleges';
+            $copyright = '© Copyright 2019 by <a href="#" title="Foundation for California Community Colleges">Foundation for California Community Colleges</a>';
         }
         ?>
 
         <footer id="footer" class="footer">
             <div class="container">
-                <div class="row-table">
-                    <div class="column">
-                        <?php if ($copyright) { ?>
-                            <div class="content"><p><?php echo $footer_about; ?></p></div>
-                        <?php } ?>
+                <?php if ($footer_logo_id) { ?>
+                    <a href="<?php echo home_url(); ?>" class="logo">
+                        <?php echo wp_get_attachment_image($footer_logo_id, 'large', false, array('alt' => esc_attr(get_bloginfo('name')))); ?>
+                    </a>
+                <?php } ?>
 
-                        <?php if ($copyright) { ?>
-                            <p class="copyright"><?php echo $copyright; ?></p>
-                        <?php } ?>
+                <?php
+                    if(has_nav_menu( 'footer-menu' )) {
+                        wp_nav_menu(array(
+                            'theme_location'  => 'footer-menu',
+                            'menu'            => 'Footer Menu',
+                            'container'       => 'nav',
+                            'container_class' => 'footer-nav',
+                            'container_id'    => false,
+                            'items_wrap'      => '<ul>%3$s</ul>',
+                            'depth'           => 1
+                        ));
+                     }
+                ?>
 
-                        <?php
-                        if(has_nav_menu( 'footer-bottom-menu' )) {
-                            wp_nav_menu(array(
-                                'theme_location'  => 'footer-bottom-menu',
-                                'menu'            => 'Footer Bottom Menu',
-                                'container'       => 'nav',
-                                'container_class' => 'footer-bottom-nav',
-                                'container_id'    => false,
-                                'items_wrap'      => '<ul>%3$s</ul>',
-                                'depth'           => 1
-                            ));
-                        }
-                        ?>
-                    </div>
-                    <?php /*if ($partners && is_array($partners) && count($partners) > 0) { ?>
-                        <div class="column partners">
-                            <ul class="partners-list">
-                                <?php
-                                    foreach ($partners as $partner) {
-                                        $partner_name = trim($partner['name']) ? $partner['name'] : '';
-                                        $partner_logo = $partner['logo']['ID'] ? $partner['logo']['ID'] : '';
-                                        $partner_url  = trim($partner['address']) ? $partner['address'] : '';
 
-                                        $partner_box = wp_get_attachment_image($partner_logo, 'medium', false, array('alt' => $partner_name));
+                <div class="content">
+	                <?php
+                        if ($footer_about)
+                            echo $footer_about;
 
-                                        if ($partner_url) {
-                                            $partner_box = '<a href="'.esc_url($partner_url).'" title="'.__('Visit ','scd-lab').esc_attr($partner_name).'" rel="nofollow noopener" target="_blank">'.$partner_box.'</a>';
-                                        }
-
-                                        if ($partner_box) {
-                                            echo '<li>'.$partner_box.'</li>';
-                                        }
-                                    }
-                                ?>
-                            </ul>
-                        </div>
-                    <?php } */?>
+                        if ($copyright)
+                            echo '<p class="copyright">'.$copyright.'</p>';
+                    ?>
                 </div>
+
+	            <?php
+                    if (has_nav_menu( 'footer-bottom-menu' )) {
+	                    wp_nav_menu(array(
+                            'theme_location'  => 'footer-bottom-menu',
+                            'menu'            => 'Footer Bottom Menu',
+                            'container'       => 'nav',
+                            'container_class' => 'footer-nav bottom-nav',
+                            'container_id'    => false,
+                            'items_wrap'      => '<ul>%3$s</ul>',
+                            'depth'           => 1
+                        ));
+                    }
+                ?>
+
             </div>
         </footer>
     </div>

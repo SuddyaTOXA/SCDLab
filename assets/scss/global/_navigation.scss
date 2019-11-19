@@ -1,7 +1,8 @@
 .main-nav {
   display: inline-block;
-  @include calc('max-width', '100% - 530px');
-  vertical-align: middle;
+  @include calc('max-width', '100% - 480px');
+  width: 100%;
+  text-align: right;
   @media all and (max-width: 1024px) {
     @include calc('max-width', '100% - 270px');
   }
@@ -9,19 +10,22 @@
     display: none;
   }
   > ul {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+    display: block;
+    margin-right: -25px;
+    //display: table;
+    //width: 100%;
+    //table-layout: fixed;
     > li {
       position: relative;
-      display: table-cell;
-      vertical-align: top;
-      text-align: center;
+      //display: table-cell;
+      //vertical-align: top;
+      display: inline-block;
+      text-align: left;
       a {
         position: relative;
-        display: block;
-        padding: 14px 15px;
-        @include font($bold, $size-smaller, $font-secondary, $line-height-heading-2);
+        display: inline-block;
+        padding: 14px 17px;
+        @include font($bold, $size-smaller, $font-main, $line-height-heading-3);
         color: $color-text2;
         text-decoration: none;
         text-transform: uppercase;
@@ -186,43 +190,3 @@
   }
 }
 
-.footer-bottom-nav {
-  > ul {
-    margin: 0 -10px -10px;
-    li {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 10px;
-      &:not(:first-child) {
-        padding-left: 1px;
-        &:before {
-          position: absolute;
-          top: 50%;
-          left: 0;
-          content: '';
-          width: 1px;
-          height: 14px;
-          background-color: $color-text3;
-          @include css3-prefix('transform','translate(0, -50%)');
-        }
-      }
-      a {
-        display: inline-block;
-        padding: 10px 10px;
-        color: $color-text3;
-        @include font($bold, $size-smaller, $font-secondary, $line-height-heading-2);
-        font-weight: $bold;
-        text-transform: uppercase;
-        text-decoration: none;
-        @media all and (min-width: 769px) {
-          &:hover, &:focus {
-            color: $color-text3;
-          }
-        }
-      }
-      &.current-menu-item a {
-        color: $color-text3;
-      }
-    }
-  }
-}

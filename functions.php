@@ -1,7 +1,7 @@
 <?php
 // loading styles and scripts
 function load_style_script(){
-    wp_enqueue_style('fonts', '//fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,500,600,700|Source+Sans+Pro:400,400i&display=swap', array(), null);
+    wp_enqueue_style('fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700|Source+Serif+Pro:400,600,700&display=swap', array(), null);
 //    https://fonts.google.com/?query=sou&selection.family=Source+Code+Pro:400,400i,500,600,700|Source+Sans+Pro:400,400i
 //    wp_enqueue_style('swiper.min', '//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css', array(), null );
 //    wp_enqueue_style('screen', get_template_directory_uri() . '/assets/css/app.min.css', array(), null );

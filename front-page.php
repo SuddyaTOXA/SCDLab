@@ -7,9 +7,9 @@ get_header(); ?>
     <section class="section-hero">
         <div class="container">
             <h1 class="hero-title">Serving the colleges through student validated design.</h1>
-            <div class="content">
-                <p><b>Students use many digital tools throughout
-                    their higher educational journeys.</b> The lab
+            <div class="content big">
+                <p><strong>Students use many digital tools throughout
+                    their higher educational journeys.</strong> The lab
                     helps improve students’ experience with them
                     through the application of human-centered
                     design thinking.</p>
@@ -23,14 +23,16 @@ get_header(); ?>
     <section class="section-blockquote inverse">
         <div class="container">
             <div class="blockquote-wrap">
-                <div class="blockquote-box">
-                    <div class="content">
-                        <p><b>I think it’s great that you’re looking at student input.</b> At the end of the day, it’s the student that will be using it and benefiting from it.</p>
+                <div class="inner-box">
+                    <div class="blockquote-box">
+                        <div class="content">
+                            <p><strong>I think it’s great that you’re looking at student input.</strong> At the end of the day, it’s the student that will be using it and benefiting from it.</p>
+                        </div>
+                        <div class="blockquote-author">
+                            <span class="name">– Student Participant</span>
+                        </div>
                     </div>
-                    <div class="blockquote-author">
-                        – <span class="name">Student Participant</span>
                     </div>
-                </div>
             </div>
         </div>
     </section>
@@ -46,17 +48,17 @@ get_header(); ?>
                 </div>
                 <a href="#" class="btn-small" title="Read the vision for success"><span>Read the vision for success</span></a>
             </div>
-            <div class="img-box">
-                    <img src="img" alt="">
+            <div class="img-box rotate">
+                <img src="<?php echo bloginfo('template_directory'); ?>/img/commitment_v2@2x.png" alt="Design with the student in mind">
             </div>
         </div>
     </section>
 
     <section class="section-design-thinking inverse">
         <div class="container">
-            <h2 class="section-title title-upper">Applying design thinking to improve the student experience</h2>
+            <h2 class="section-thin-title">Applying <strong>design thinking</strong> to improve the student experience</h2>
             <div class="img-box">
-                <img src="" alt="">
+                <img src="<?php echo bloginfo('template_directory'); ?>/img/design-thinking.svg" alt="design-thinking">
             </div>
         </div>
     </section>
@@ -73,9 +75,11 @@ get_header(); ?>
                     <div class="box">
                         <h3 class="box-title">Student Participants</h3>
                         <div class="box-img-wrap">
-                            <img src="" alt="">
+                            <div class="centered-img">
+                                <img src="<?php echo bloginfo('template_directory'); ?>/img/student_participants@2x.png" alt="Student Participants">
+                            </div>
                         </div>
-                        <a href="#" class="btn" title="Sign up as a student participant"><span>Sign up as a student participant</span></a>
+                        <a href="#" class="btn internal-link" title="Sign up as a student participant"><span>Sign up as a student participant</span></a>
                         <div class="box-desc content">
                             <p><b>Join our prospective and current student participant pool by completing the online screener.</b> If you match the profile needed for a study’s requirements, you may be contacted to participate in a study, either in-person or virtually. If selected for a study, you will be compensated for your time with a gift card.</p>
                         </div>
@@ -85,9 +89,11 @@ get_header(); ?>
                     <div class="box">
                         <h3 class="box-title">Project Partners</h3>
                         <div class="box-img-wrap">
-                            <img src="" alt="">
+                            <div class="centered-img">
+                                <img src="<?php echo bloginfo('template_directory'); ?>/img/project_partners@2x.png" alt="Project Partners">
+                            </div>
                         </div>
-                        <a href="#" class="btn"><span>Partner with us</span></a>
+                        <a href="#" class="btn internal-link"><span>Partner with us</span></a>
                         <div class="box-desc">
                             <p><b>Have a student-facing technology tool, communications campaign, or policy initiative you’d like feedback on?</b> Please complete the project in-take form so the lab team can learn more about your project’s goals.</p>
                         </div>
@@ -101,16 +107,20 @@ get_header(); ?>
     <section class="section-blockquote inverse">
         <div class="container">
             <div class="blockquote-wrap">
-                <div class="blockquote-photo-img">
-                    <img src="img" alt="">
-                </div>
-                <div class="blockquote-box">
-                    <div class="content">
-                        <p><b>Our vision for change puts a sharp focus on students’ goals and needs,</b> designing and making decisions that put students first, having high expectations and high levels of support for all students, including working adults.</p>
+                <div class="inner-box">
+                    <div class="blockquote-box">
+                        <div class="content">
+                            <p><b>Our vision for change puts a sharp focus on students’ goals and needs,</b> designing and making decisions that put students first, having high expectations and high levels of support for all students, including working adults.</p>
+                        </div>
+                        <div class="blockquote-author">
+                            <span class="name">– Eloy Ortiz Oakley</span>
+                            <span class="position">Chancellor, CALIFORNIA COMMUNITY COLLEGES</span>
+                        </div>
                     </div>
-                    <div class="blockquote-author">
-                        – <span class="name">– Eloy Ortiz Oakley</span>
-                        <span class="position">Chancellor, CALIFORNIA COMMUNITY COLLEGES</span>
+                </div>
+                <div class="inner-box">
+                    <div class="blockquote-photo-img centered-img">
+                        <img class="higher" src="<?php echo bloginfo('template_directory'); ?>/img/avatar@2x.png" alt="Avatar">
                     </div>
                 </div>
             </div>

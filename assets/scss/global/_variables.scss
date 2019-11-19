@@ -1,6 +1,6 @@
 /*fonts*/
-$font-main: 'Source Sans Pro', sans-serif;
-$font-secondary: 'Source Code Pro', monospace;
+$font-main: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$font-secondary: 'Source Serif Pro', serif;
 
 /*fonts-weight*/
 $normal: 400;
@@ -24,9 +24,10 @@ $size-heading5: 28px;
 $size-heading6: 20px;
 
 /*line-height*/
-$line-height: 1.6;
+$line-height: 1.5;
 $line-height-heading: 1;
 $line-height-heading-2: 1.25;
+$line-height-heading-3: 1.125;
 
 
 /*colors*/
@@ -47,7 +48,7 @@ $color-text2: #0066BA;
 $color-text3: #002755;
 //$color-text4: #002755;
 
-$color-bg1: $white;
+$color-bg: $white;
 $color-bg2: #0066BA;
 $color-bg3: #002755;
 $color-bg4: #D9F0FA;

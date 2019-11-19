@@ -20,8 +20,8 @@
 
 // FONT
 @mixin font($weight: $normal, $size: $size-main, $family: $font-main, $line-height: $line-height) {
-  font: $weight $size $family;
-  line-height: $line-height;
+  font: $weight $size/#{$line-height} $family;
+  //line-height: $line-height;
 }
 
 // BACKGROUND IMAGE

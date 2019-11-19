@@ -1,65 +1,64 @@
 .btn, a.btn {
   position: relative;
   display: inline-block;
-  min-width: 157px;
-  max-width: 100%;
-  padding: 8px 12px;
-  @include font($semi-bold, 18px, $font-secondary, 1.2);
-  text-align: center;
-  text-decoration: none;
+  padding: 20px 24px;
+  @include font($semi-bold, $size-small, $font-main, $line-height-heading-2);
+  letter-spacing: .05em;
   color: $white;
-  border: 1px solid $color-bg2;
-  background-color: $color-bg2;
-  span {
-    color: $color-text2;
+  border: 0;
+  background: $color-bg2;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background: #005296;
   }
-  @media all and (max-width: 768px) {
-    min-width: 200px;
-    padding: 22px 20px;
-    font-size: 14px;
-  }
-  @media all and (min-width: 769px) {
-    &:hover, &:focus {
-      background-color: #4b2936;
-      text-decoration: none;
-    }
-  }
-  &.btn-jump-to-content, a.btn-jump-to-content {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 50%;
-    z-index: -9999;
-    opacity: 0;
-    @include css3-prefix('transform', 'translateX(-50%)');
-    &:focus {
-      opacity: 1;
-      z-index: 99999;
+  &.internal-link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 54px;
+    position: relative;
+    text-align: left;
+    max-width: 445px;
+    width: 100%;
+    &:after {
+      position: absolute;
+      content: "\e902";
+      font-family: 'iconfont';
+      font-size: 12px;
+      right: 18px;
+      top: 50%;
+      @include css3-prefix('transform', 'translateY(-50%)');
     }
   }
 }
 
 #skip-to-content a:not(:focus) {
+  overflow: hidden;
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
-  overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
 #skip-to-content a:focus {
+  position: absolute;
+  z-index: 1002;
+  left: 50%;
+  padding: 10px 20px;
+  color: $color-text2;
   background-color: #f2f2f2;
   border: 1px solid #ddd;
-  color: $c-blue;
   -webkit-box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1);
-  padding: 10px 20px;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  z-index: 1002;
+  @include css3-prefix('transform', 'translateX(-50%)');
 }
+
+

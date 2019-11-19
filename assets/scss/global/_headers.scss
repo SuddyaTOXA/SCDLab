@@ -1,12 +1,14 @@
 #header {
   position: relative;
-  padding: 66px 0;
+  z-index: 100;
+  padding: 50px 0;
   background-color: $white;
   @media all and (max-width: 1024px) {
     padding: 30px 0;
   }
   @media all and (max-width: 768px) {
-    position: absolute;
+    position: -webkit-sticky;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -15,6 +17,11 @@
     @include css3-prefix('box-shadow','0 5px 10px 0 rgba(0,0,0,.2)');
     .admin-bar & {
       top: 46px;
+    }
+  }
+  @media all and (max-width: 600px) {
+    .admin-bar & {
+      top: 0;
     }
   }
   .container {
@@ -26,7 +33,7 @@
   .logo {
     overflow: hidden;
     display: inline-block;
-    max-width: 477px;
+    max-width: 444px;
     margin-right: 30px;
     @include transition($transition-other);
     vertical-align: middle;
