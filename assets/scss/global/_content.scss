@@ -17,7 +17,7 @@
   }
   * {
     //margin-bottom: 10px;
-    margin-bottom: 28px;
+    margin-bottom: 29px;
 
     &:last-child {
       margin-bottom: 0;
@@ -34,7 +34,12 @@
       }
     }
   }
-
+  strong, b {
+    font-weight: $bold;
+  }
+  i {
+    font-style: italic;
+  }
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 18px;
     line-height: $line-height-heading;

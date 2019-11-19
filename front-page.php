@@ -42,7 +42,7 @@ get_header(); ?>
             <div class="content-box">
                 <h2 class="section-title">Design with the student in mind.</h2>
                 <div class="content">
-                    <p>Commitment two of the Vision for Success states that the colleges should “<a href="#" title="">always design and decide with the student in mind</a>.”</p>
+                    <p>Commitment two of the <i>Vision for Success</i> states that the colleges should “<a href="#" title="">always design and decide with the student in mind</a>.”</p>
                     <p>The lab helps the California Community Colleges <b>keep students at the center</b> of development and refinement efforts. Authentic student input is gathered by the lab team to guide and test the design of technology tools, communication campaigns, and policy initiatives.</p>
 
                 </div>
@@ -134,18 +134,30 @@ get_header(); ?>
             <div class="section-desc">
                 <p>Student Centered Design Lab services are equity- and outcome-focused, and they are aligned with the Student Success Metrics. Lab services include</p>
             </div>
+
+            <h3 class="small-title">Lab services include</h3>
+
             <div class="inner-row">
-                <h3 class="row-title">Insights</h3>
-                <ul class="box-list">
+                <div class="row-title-box">
+                    <h3 class="row-title">Insights</h3>
+                </div>
+                <ul class="box-list services-list">
                     <li>
                         <div class="box">
                             <div class="box-img-wrap">
-                                <img src="" alt="Expert Review">
+                                <span class="custom-icon work-office-companies"></span>
                             </div>
                             <div class="inner-box">
                                 <h3 class="box-title">Expert Review</h3>
-                                <div class="box-desc content">
-                                    <p>Technical evaluation Design quality evaluation Cognitive walkthrough Heuristic evaluation Accessibility evaluation Persona development</p>
+                                <div class="box-desc">
+                                    <ul>
+                                        <li>Technical evaluation</li>
+                                        <li>Design quality evaluation</li>
+                                        <li>Cognitive walkthrough</li>
+                                        <li>Heuristic evaluation</li>
+                                        <li>Accessibility evaluation</li>
+                                        <li>Persona development</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -153,12 +165,16 @@ get_header(); ?>
                     <li>
                         <div class="box">
                             <div class="box-img-wrap">
-                                <img src="" alt="">
+                                <span class="custom-icon messages-people"></span>
                             </div>
                             <div class="inner-box">
                                 <h3 class="box-title">Student Feedback</h3>
-                                <div class="box-desc content">
-                                    <p>Visual preference (in-person and virtual) Usability testing (in-person and virtual) Field research</p>
+                                <div class="box-desc">
+                                    <ul>
+                                        <li>Visual preference (in-person and virtual)</li>
+                                        <li>Usability testing (in-person and virtual)</li>
+                                        <li>Field research</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -166,17 +182,24 @@ get_header(); ?>
                 </ul>
             </div>
             <div class="inner-row">
-                <h3 class="row-title">Research</h3>
-                <ul class="box-list">
+                <div class="row-title-box">
+                    <h3 class="row-title">Research</h3>
+                </div>
+                <ul class="box-list services-list">
                     <li>
                         <div class="box">
                             <div class="box-img-wrap">
-                                <img src="" alt="Expert Review">
+                                <span class="custom-icon business-products"></span>
                             </div>
                             <div class="inner-box">
                                 <h3 class="box-title">Quantitative</h3>
-                                <div class="box-desc content">
-                                    <p>Google Analytics review Search log analysis User surveys Segmentation</p>
+                                <div class="box-desc">
+                                    <ul>
+                                        <li>Google nalytics review</li>
+                                        <li>Search log analysis</li>
+                                        <li>User surveys</li>
+                                        <li>Segmentation</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -184,42 +207,27 @@ get_header(); ?>
                     <li>
                         <div class="box">
                             <div class="box-img-wrap">
-                                <img src="" alt="">
+                                <span class="custom-icon chat-people"></span>
                             </div>
                             <div class="inner-box">
                                 <h3 class="box-title">Qualitative</h3>
-                                <div class="box-desc content">
-                                    <p>Card sorting Tree test Affinity mapping Mental models Diary studies User interviews User focus groups</p>
+                                <div class="box-desc">
+                                    <ul>
+                                        <li>Card sorting</li>
+                                        <li>Tree test</li>
+                                        <li>Affinity mapping</li>
+                                        <li>Mental models</li>
+                                        <li>Diary studies</li>
+                                        <li>User interviews</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-            <a href="" class="btn" title="More about the lab’s services"><span>More about the lab’s services</span></a>
+            <a href="#" class="btn internal-link" title="More about the lab’s services"><span>More about the lab’s services</span></a>
         </div>
     </section>
-
-
-
-
-
-
-    <section class="section section-content">
-        <div class="container">
-            <div class="content">
-
-				<?php
-				if ( have_posts() ) : while ( have_posts() ) : the_post();
-
-					the_content();
-
-				endwhile; else: endif;
-				?>
-
-            </div>
-        </div>
-    </section>
-
 
 <?php get_footer(); ?>

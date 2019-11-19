@@ -1,4 +1,4 @@
-.btn, a.btn {
+a.btn, .btn {
   position: relative;
   display: inline-block;
   padding: 20px 24px;
@@ -61,4 +61,42 @@
   @include css3-prefix('transform', 'translateX(-50%)');
 }
 
+a.btn-small, .btn-small {
+  position: relative;
+  display: inline-block;
+  padding: 6px 0 9px;
+  @include font($semi-bold, $size-smaller, $font-main, $line-height-heading-2);
+  letter-spacing: .05em;
+  color: $color-text2;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  span {
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      max-width: 1200px;
+      height: 3px;
+      left: 50%;
+      bottom: 0;
+      background-color: $c-gold;
+      @include css3-prefix('transform', 'translateX(-50%)');
+      @include css3-prefix('transition', 'max-width 0.35s ease-out');
+    }
+  }
+  &:hover,
+  &:focus {
+    span {
+      &:after {
+        max-width: 0;
+      }
+    }
+  }
+}
 
