@@ -1,20 +1,23 @@
 .main-nav {
   display: inline-block;
-  @include calc('max-width', '100% - 480px');
+  @include calc('max-width', '100% - 500px');
   width: 100%;
   text-align: right;
-  @media all and (max-width: 1024px) {
-    @include calc('max-width', '100% - 270px');
+  @media all and ($tablet) {
+    @include calc('max-width', '100% - 240px');
   }
-  @media all and (max-width: 768px) {
+  @media all and ($mobile) {
     display: none;
   }
   > ul {
     display: block;
-    margin-right: -25px;
+    margin-right: -20px;
     //display: table;
     //width: 100%;
     //table-layout: fixed;
+    @media all and ($laptop) {
+      margin-right: -5px;
+    }
     > li {
       position: relative;
       //display: table-cell;
@@ -29,6 +32,10 @@
         color: $color-text2;
         text-decoration: none;
         text-transform: uppercase;
+        @media all and ($laptop) {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
         > span {
           position: relative;
           display: inline-block;
@@ -50,7 +57,7 @@
             z-index: 3;
           }
         }
-        @media all and (min-width: 769px) {
+        @media all and ($start-hover) {
           &:hover, &:focus {
             span {
               &:after {
@@ -124,8 +131,8 @@
       text-transform: uppercase;
       margin: 0 15px 5px;
       padding: 7px 0;
-      font-size: $size-small;
-      color: #212020;
+      @include font($bold, $size-big, $font-main, $line-height-heading-3);
+      color: $color-text2;
       text-decoration: none;
       .fas  {
         position: absolute;
@@ -177,8 +184,8 @@
   .sub-menu {
     padding-left: 20px;
     a {
-      font-size: $size-small;
-      @media all and (min-width: 769px) {
+      font-size: $size-main;
+      @media all and ($start-hover) {
         &:hover {
           text-decoration:none;
         }

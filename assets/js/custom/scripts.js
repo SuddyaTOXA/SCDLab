@@ -43,6 +43,19 @@ jQuery(document).ready(function($) {
             });
         }
     });
+
+    // for blockquote
+    $(function () {
+        if ($('.blockquote-box .content').length) {
+            $(window).on('load', function () {
+                var box = $('.blockquote-box .content > :last-child');
+
+                box.each(function (i) {
+                    box.eq(i).append('<span class="quote-icon"></span>');
+                });
+            });
+        }
+    });
 /*
     //for submenu
     $(function () {

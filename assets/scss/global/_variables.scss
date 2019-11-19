@@ -63,7 +63,7 @@ $radius-small: 5px;
 
 //columns - grid - for custom layouts
 $col: 8.333333333%;
-$gutter: 20px;
+$gutter: 25px;
 
 $width-col-1: 100% / 12;
 $width-col-2: 100% / 6;
@@ -78,3 +78,8 @@ $width-col-10: 100% / 1.2;
 $width-col-11: 100% / 1.090909090909091;
 $width-col-12: 100%;
 
+$start-hover:   'min-width: 769px';
+$mobile-small:  'max-width: 360px';
+$mobile:        'max-width: 768px';
+$tablet:        'max-width: 1024px';
+$laptop:        'max-width: 1160px';

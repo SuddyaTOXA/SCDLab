@@ -14,7 +14,7 @@
       margin-bottom: -35px;
       @include font($bold, 200px, $font-secondary, $line-height-heading);
     }
-    @media all and (max-width: 768px) {
+    @media all and ($mobile) {
       font-size: 60px;
       .error-404 {
         font-size: 160px;

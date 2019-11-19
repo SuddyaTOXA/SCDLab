@@ -36,7 +36,7 @@ textarea.input-style {
   //-moz-appearance: none;
   //appearance: none;
   //@include border-radius(0);
-  @media all and (max-width: 768px) {
+  @media all and ($mobile) {
     height: 160px;
   }
 }

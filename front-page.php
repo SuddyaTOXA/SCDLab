@@ -6,39 +6,49 @@ get_header(); ?>
 
     <section class="section-hero">
         <div class="container">
-            <h1 class="hero-title">Serving the colleges through student validated design.</h1>
-            <div class="content big">
-                <p><strong>Students use many digital tools throughout
-                    their higher educational journeys.</strong> The lab
-                    helps improve students’ experience with them
-                    through the application of human-centered
-                    design thinking.</p>
-                <p>The Student Centered Design Lab provides the
-                    California Community Colleges with design
-                    guidance, evaluation, and research.</p>
+            <div class="img-box">
+                <img class="hero-img" src="<?php echo bloginfo('template_directory'); ?>/img/hero@2x.png" alt="Hero">
+            </div>
+            <div class="content-box">
+                <h1 class="hero-title">Serving the colleges through student validated design.</h1>
+                <div class="content big">
+                    <p><strong>Students use many digital tools throughout
+                        their higher educational journeys.</strong> The lab
+                        helps improve students’ experience with them
+                        through the application of human-centered
+                        design thinking.</p>
+                    <p>The Student Centered Design Lab provides the
+                        California Community Colleges with design
+                        guidance, evaluation, and research.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="section-blockquote inverse">
         <div class="container">
-            <div class="blockquote-wrap">
-                <div class="inner-box">
-                    <div class="blockquote-box">
-                        <div class="content">
-                            <p><strong>I think it’s great that you’re looking at student input.</strong> At the end of the day, it’s the student that will be using it and benefiting from it.</p>
-                        </div>
-                        <div class="blockquote-author">
-                            <span class="name">– Student Participant</span>
+            <div class="blockquote-wrap without-img">
+                <div class="blockquote-table">
+                    <div class="inner-box">
+                        <div class="blockquote-box">
+                            <div class="content">
+                                <p><strong>I think it’s great that you’re looking at student input.</strong> At the end of the day, it’s the student that will be using it and benefiting from it.</p>
+                            </div>
                         </div>
                     </div>
-                    </div>
+                </div>
+                <div class="blockquote-author">
+                    <span class="name">– Student Participant</span>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="section-info">
         <div class="container">
+            <div class="img-box">
+                <img src="<?php echo bloginfo('template_directory'); ?>/img/commitment@2x.png" alt="Design with the student in mind">
+            </div>
             <div class="content-box">
                 <h2 class="section-title">Design with the student in mind.</h2>
                 <div class="content">
@@ -48,17 +58,17 @@ get_header(); ?>
                 </div>
                 <a href="#" class="btn-small" title="Read the vision for success"><span>Read the vision for success</span></a>
             </div>
-            <div class="img-box rotate">
-                <img src="<?php echo bloginfo('template_directory'); ?>/img/commitment_v2@2x.png" alt="Design with the student in mind">
-            </div>
         </div>
     </section>
 
     <section class="section-design-thinking inverse">
         <div class="container">
             <h2 class="section-thin-title">Applying <strong>design thinking</strong> to improve the student experience</h2>
-            <div class="img-box">
+            <div class="img-box desktop">
                 <img src="<?php echo bloginfo('template_directory'); ?>/img/design-thinking.svg" alt="design-thinking">
+            </div>
+            <div class="img-box mobile">
+                <img src="<?php echo bloginfo('template_directory'); ?>/img/design-thinking_mob.svg" alt="design-thinking">
             </div>
         </div>
     </section>
@@ -76,7 +86,7 @@ get_header(); ?>
                         <h3 class="box-title">Student Participants</h3>
                         <div class="box-img-wrap">
                             <div class="centered-img">
-                                <img src="<?php echo bloginfo('template_directory'); ?>/img/student_participants@2x.png" alt="Student Participants">
+                                <img class="wider" src="<?php echo bloginfo('template_directory'); ?>/img/student_participants@2x.png" alt="Student Participants">
                             </div>
                         </div>
                         <a href="#" class="btn internal-link" title="Sign up as a student participant"><span>Sign up as a student participant</span></a>
@@ -90,7 +100,7 @@ get_header(); ?>
                         <h3 class="box-title">Project Partners</h3>
                         <div class="box-img-wrap">
                             <div class="centered-img">
-                                <img src="<?php echo bloginfo('template_directory'); ?>/img/project_partners@2x.png" alt="Project Partners">
+                                <img class="wider" src="<?php echo bloginfo('template_directory'); ?>/img/project_partners@2x.png" alt="Project Partners">
                             </div>
                         </div>
                         <a href="#" class="btn internal-link"><span>Partner with us</span></a>
@@ -107,21 +117,23 @@ get_header(); ?>
     <section class="section-blockquote inverse">
         <div class="container">
             <div class="blockquote-wrap">
-                <div class="inner-box">
-                    <div class="blockquote-box">
-                        <div class="content">
-                            <p><b>Our vision for change puts a sharp focus on students’ goals and needs,</b> designing and making decisions that put students first, having high expectations and high levels of support for all students, including working adults.</p>
+                <div class="blockquote-table">
+                    <div class="inner-box">
+                        <div class="blockquote-box">
+                            <div class="content">
+                                <p><b>Our vision for change puts a sharp focus on students’ goals and needs,</b> designing and making decisions that put students first, having high expectations and high levels of support for all students, including working adults.</p>
+                            </div>
                         </div>
-                        <div class="blockquote-author">
-                            <span class="name">– Eloy Ortiz Oakley</span>
-                            <span class="position">Chancellor, CALIFORNIA COMMUNITY COLLEGES</span>
+                    </div>
+                    <div class="inner-box">
+                        <div class="blockquote-photo-img centered-img">
+                            <img class="higher" src="<?php echo bloginfo('template_directory'); ?>/img/avatar@2x.png" alt="Avatar">
                         </div>
                     </div>
                 </div>
-                <div class="inner-box">
-                    <div class="blockquote-photo-img centered-img">
-                        <img class="higher" src="<?php echo bloginfo('template_directory'); ?>/img/avatar@2x.png" alt="Avatar">
-                    </div>
+                <div class="blockquote-author">
+                    <span class="name">– Eloy Ortiz Oakley</span>
+                    <span class="position">Chancellor,<br> CALIFORNIA COMMUNITY COLLEGES</span>
                 </div>
             </div>
         </div>

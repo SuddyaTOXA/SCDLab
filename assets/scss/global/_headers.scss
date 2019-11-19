@@ -3,25 +3,17 @@
   z-index: 100;
   padding: 50px 0;
   background-color: $white;
-  @media all and (max-width: 1024px) {
-    padding: 30px 0;
-  }
-  @media all and (max-width: 768px) {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    left: 0;
+  @media all and ($mobile) {
     width: 100%;
-    min-height: 64px;
-    padding: 11px 0 10px;
-    @include css3-prefix('box-shadow','0 5px 10px 0 rgba(0,0,0,.2)');
+    padding: 25px 0 25px;
+    text-align: center;
     .admin-bar & {
-      top: 46px;
+      margin-top: 46px;
     }
   }
   @media all and (max-width: 600px) {
     .admin-bar & {
-      top: 0;
+      margin-top: 0;
     }
   }
   .container {
@@ -30,13 +22,25 @@
     }
   }
 }
+
   .logo {
     overflow: hidden;
     display: inline-block;
     max-width: 444px;
-    margin-right: 30px;
+    margin-right: 10px;
     @include transition($transition-other);
     vertical-align: middle;
+    @media all and ($tablet) {
+      max-width: 222px;
+    }
+    @media all and ($mobile) {
+      margin-top: 70px;
+      margin-right: auto;
+      max-width: 444px;
+      .admin-bar & {
+        margin-top: 19px;
+      }
+    }
     img {
       display: block;
       max-width: 100%;
@@ -44,16 +48,12 @@
       width: auto;
       height: auto;
     }
-    @media all and (max-width: 1024px) {
-      max-width: 239px;
-      margin-right: 20px;
-    }
   }
 
 .mobile-menu-wrap,
 .mobile-menu-toggle {
   display: none;
-  @media all and (max-width: 768px) {
+  @media all and ($mobile) {
     display: block;
   }
 }
@@ -68,6 +68,9 @@
   @include css3-prefix('transition-delay',$transition-other);
   .admin-bar & {
     top: 110px;
+    @media all and (max-width: 600px) {
+      top: 64px;
+    }
   }
   &.showing {
     height: 100%;
@@ -97,6 +100,7 @@
   right: -100%;
   z-index: 2;
   padding-bottom: 100px;
+  text-align: left;
   background-color: rgba($white,.9);
   @include css3-prefix('transition','right .35s');
   @include css3-prefix('box-shadow',' -10px 10px 30px rgba(0,0,0,.2)');
@@ -106,14 +110,23 @@
   right: 0
 }
 .mobile-menu-toggle {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   height: 64px;
-  width: 64px;
+  width: 100%;
   vertical-align: middle;
   cursor: pointer;
   font-size: 26px;
+  background-color: $color-bg2;
+  .admin-bar & {
+    top: 46px;
+  }
+  @media all and (max-width: 600px) {
+    .admin-bar & {
+      top: 0;
+    }
+  }
 }
 .mobile-menu-toggle span:before,
 .mobile-menu-toggle span:after,
@@ -122,22 +135,22 @@
   display: block;
   content: '';
   cursor: pointer;
-  height: 2px;
-  width: 30px;
-  background-color: $black;
+  height: 6px;
+  width: 36px;
+  background-color: $white;
   @include css3-prefix('transition','all .35s');
 }
 .mobile-menu-toggle span {
   z-index: 999999;
-  left: 50%;
+  right: 0;
   top: 50%;
   @include css3-prefix('transform','translate(-50%,-50%)');
 }
 .mobile-menu-toggle span:before {
-  top: -9px;
+  top: -12px;
 }
 .mobile-menu-toggle span:after {
-  bottom: -9px;
+  bottom: -12px;
 }
 .mobile-menu-toggle.active span {
   background-color: transparent;

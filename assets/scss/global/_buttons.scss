@@ -1,7 +1,7 @@
 a.btn, .btn {
   position: relative;
   display: inline-block;
-  padding: 20px 24px;
+  padding: 19px 24px;
   @include font($semi-bold, $size-small, $font-main, $line-height-heading-2);
   letter-spacing: .05em;
   color: $white;
@@ -13,6 +13,9 @@ a.btn, .btn {
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  @media all and ($mobile-small) {
+    font-size: 16px;
+  }
   &:hover,
   &:focus {
     background: #005296;
@@ -26,6 +29,11 @@ a.btn, .btn {
     text-align: left;
     max-width: 445px;
     width: 100%;
+    @media all and ($mobile) {
+      padding-left: 16px;
+      padding-right: 44px;
+      letter-spacing: .025em;
+    }
     &:after {
       position: absolute;
       content: "\e902";
