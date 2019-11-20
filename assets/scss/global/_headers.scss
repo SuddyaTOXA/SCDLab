@@ -135,14 +135,14 @@
   display: block;
   content: '';
   cursor: pointer;
-  height: 6px;
-  width: 36px;
+  height: 5px;
+  width: 34px;
   background-color: $white;
   @include css3-prefix('transition','all .35s');
 }
 .mobile-menu-toggle span {
   z-index: 999999;
-  right: 0;
+  right: 9px;
   top: 50%;
   @include css3-prefix('transform','translate(-50%,-50%)');
 }

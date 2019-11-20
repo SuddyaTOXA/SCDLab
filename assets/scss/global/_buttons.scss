@@ -1,9 +1,9 @@
 a.btn, .btn {
   position: relative;
   display: inline-block;
-  padding: 19px 24px;
+  padding: 19px 25px;
   @include font($semi-bold, $size-small, $font-main, $line-height-heading-2);
-  letter-spacing: .05em;
+  letter-spacing: .025em;
   color: $white;
   border: 0;
   background: $color-bg2;
@@ -25,13 +25,14 @@ a.btn, .btn {
     overflow: hidden;
     text-overflow: ellipsis;
     padding-right: 54px;
+    padding-left: 14px;
     position: relative;
     text-align: left;
     max-width: 445px;
     width: 100%;
     @media all and ($mobile) {
-      padding-left: 16px;
-      padding-right: 44px;
+      padding-left: 14px;
+      padding-right: 40px;
       letter-spacing: .025em;
     }
     &:after {
@@ -39,7 +40,7 @@ a.btn, .btn {
       content: "\e902";
       font-family: 'iconfont';
       font-size: 12px;
-      right: 18px;
+      right: 12px;
       top: 50%;
       @include css3-prefix('transform', 'translateY(-50%)');
     }
@@ -74,7 +75,7 @@ a.btn-small, .btn-small {
   display: inline-block;
   padding: 6px 0 9px;
   @include font($semi-bold, $size-smaller, $font-main, $line-height-heading-2);
-  letter-spacing: .05em;
+  letter-spacing: .02em;
   color: $color-text2;
   border: 0;
   background: transparent;

@@ -1,6 +1,6 @@
 .main-nav {
   display: inline-block;
-  @include calc('max-width', '100% - 500px');
+  @include calc('max-width', '100% - 460px');
   width: 100%;
   text-align: right;
   @media all and ($tablet) {
@@ -11,7 +11,7 @@
   }
   > ul {
     display: block;
-    margin-right: -20px;
+    margin-right: -23px;
     //display: table;
     //width: 100%;
     //table-layout: fixed;
@@ -24,6 +24,7 @@
       //vertical-align: top;
       display: inline-block;
       text-align: left;
+      vertical-align: middle;
       a {
         position: relative;
         display: inline-block;

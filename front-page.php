@@ -8,6 +8,7 @@ get_header(); ?>
         <div class="container">
             <div class="img-box">
                 <img class="hero-img" src="<?php echo bloginfo('template_directory'); ?>/img/hero@2x.png" alt="Hero">
+                <img class="hero-isometric-img" src="<?php echo bloginfo('template_directory'); ?>/img/isometric-phone-illustration@2x.png" alt="Hero">
             </div>
             <div class="content-box">
                 <h1 class="hero-title">Serving the colleges through student validated design.</h1>
@@ -27,19 +28,20 @@ get_header(); ?>
 
     <section class="section-blockquote inverse">
         <div class="container">
-            <div class="blockquote-wrap without-img">
+            <div class="blockquote-wrap">
                 <div class="blockquote-table">
                     <div class="inner-box">
                         <div class="blockquote-box">
                             <div class="content">
                                 <p><strong>I think it’s great that you’re looking at student input.</strong> At the end of the day, it’s the student that will be using it and benefiting from it.</p>
                             </div>
+                            <div class="blockquote-author">
+                                <span class="name">– Student participant</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="blockquote-author">
-                    <span class="name">– Student Participant</span>
-                </div>
+
             </div>
         </div>
     </section>
@@ -64,12 +66,57 @@ get_header(); ?>
     <section class="section-design-thinking inverse">
         <div class="container">
             <h2 class="section-thin-title">Applying <strong>design thinking</strong> to improve the student experience</h2>
-            <div class="img-box desktop">
-                <img src="<?php echo bloginfo('template_directory'); ?>/img/design-thinking.svg" alt="design-thinking">
-            </div>
-            <div class="img-box mobile">
-                <img src="<?php echo bloginfo('template_directory'); ?>/img/design-thinking_mob.svg" alt="design-thinking">
-            </div>
+            <ul class="development-stages-list">
+                <li>
+                    <div class="stage-box">
+                        <div class="stage-icon-wrap">
+                            <span class="custom-icon user-natural"></span>
+                        </div>
+                        <h4 class="stage-name">Empathize</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="stage-box">
+                        <div class="stage-icon-wrap">
+                            <span class="custom-icon design-process"></span>
+                        </div>
+                        <h4 class="stage-name">Define</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="stage-box">
+                        <div class="stage-icon-wrap">
+                            <span class="custom-icon creativity-idea"></span>
+                        </div>
+                        <h4 class="stage-name">Ideate</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="stage-box">
+                        <div class="stage-icon-wrap">
+                            <span class="custom-icon design-wireframe"></span>
+                        </div>
+                        <h4 class="stage-name">Prototype</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="stage-box">
+                        <div class="stage-icon-wrap">
+                            <span class="custom-icon products-testing"></span>
+                        </div>
+                        <h4 class="stage-name">Test</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="stage-box">
+                        <div class="stage-icon-wrap">
+                            <span class="custom-icon product-launch"></span>
+                        </div>
+                        <h4 class="stage-name">Implement</h4>
+                    </div>
+                </li>
+            </ul>
+
         </div>
     </section>
 
@@ -123,17 +170,21 @@ get_header(); ?>
                             <div class="content">
                                 <p><b>Our vision for change puts a sharp focus on students’ goals and needs,</b> designing and making decisions that put students first, having high expectations and high levels of support for all students, including working adults.</p>
                             </div>
+                            <div class="blockquote-author">
+                                <span class="name">– Eloy Ortiz Oakley</span>
+                                <span class="position">Chancellor,<br> CALIFORNIA COMMUNITY COLLEGES</span>
+                            </div>
                         </div>
                     </div>
                     <div class="inner-box">
                         <div class="blockquote-photo-img centered-img">
                             <img class="higher" src="<?php echo bloginfo('template_directory'); ?>/img/avatar@2x.png" alt="Avatar">
                         </div>
+                        <div class="blockquote-author">
+                            <span class="name">– Eloy Ortiz Oakley</span>
+                            <span class="position">Chancellor,<br> CALIFORNIA COMMUNITY COLLEGES</span>
+                        </div>
                     </div>
-                </div>
-                <div class="blockquote-author">
-                    <span class="name">– Eloy Ortiz Oakley</span>
-                    <span class="position">Chancellor,<br> CALIFORNIA COMMUNITY COLLEGES</span>
                 </div>
             </div>
         </div>
@@ -144,7 +195,7 @@ get_header(); ?>
         <div class="container">
             <h2 class="section-title">Lab Services</h2>
             <div class="section-desc">
-                <p>Student Centered Design Lab services are equity- and outcome-focused, and they are aligned with the Student Success Metrics. Lab services include</p>
+                <p>Student Centered Design Lab services are equity- and outcome-focused, and they are aligned with the Student Success Metrics.</p>
             </div>
 
             <h3 class="small-title">Lab services include</h3>
