@@ -189,6 +189,15 @@
     @media all and ($tablet) {
       left: 360px;
     }
+    @media all and ($mobile) {
+      position: relative;
+      left: auto;
+      bottom: auto;
+      width: 100%;
+      @include calc('width', '100% + 50px');
+      margin: 0 -25px 16px;
+      border-bottom: 1px solid #E4F4FB;
+    }
     img {
       width: auto;
       height: auto;
@@ -203,6 +212,16 @@
       @media all and ($tablet) {
         max-width: 520px;
       }
+      @media all and ($mobile) {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        max-width: 280px;
+        margin-bottom: 0;
+      }
+      @media all and ($mobile-small) {
+        left: -65px;
+      }
     }
     .hero-isometric-img {
       position: absolute;
@@ -212,23 +231,16 @@
       bottom: 120px;
       max-width: 400px;
       @media all and ($tablet) {
-        max-width: 520px;
+        max-width: 260px;
       }
-    }
-    @media all and ($mobile) {
-      position: relative;
-      left: auto;
-      bottom: auto;
-      width: 100%;
-      @include calc('width','100% + 50px');
-      margin: 0 -25px 16px;
-      border-bottom: 1px solid #E4F4FB;
-      .hero-img {
-        position: relative;
+      @media all and ($mobile) {
+        bottom: 10px;
+        max-width: 203px;
         left: auto;
-        bottom: auto;
-        max-width: 280px;
-        margin-bottom: 0;
+        right: 43px;
+      }
+      @media all and ($mobile-small) {
+        right: -35px;
       }
     }
   }
