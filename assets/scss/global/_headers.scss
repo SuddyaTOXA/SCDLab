@@ -28,7 +28,8 @@
     display: inline-block;
     max-width: 444px;
     margin-right: 10px;
-    @include transition($transition-other);
+    //@include transition($transition-other);
+    @include transition(0s);
     vertical-align: middle;
     @media all and ($tablet) {
       max-width: 222px;
