@@ -4,7 +4,7 @@
  */
 get_header(); ?>
 
-    <section class="section-hero">
+    <section class="section-banner">
         <div class="container">
             <div class="img-box">
                 <img class="hero-img" src="<?php echo bloginfo('template_directory'); ?>/img/services_hero@2x.png" alt="Hero">
