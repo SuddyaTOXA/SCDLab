@@ -53,7 +53,7 @@ get_header(); ?>
             </div>
         </div>
     </section>
-*/ ?>
+
     <section class="section-info">
         <div class="container">
             <div class="img-box">
@@ -127,6 +127,7 @@ get_header(); ?>
 
         </div>
     </section>
+*/ ?>
 
     <section class="section-work-with-lab">
         <div class="container">

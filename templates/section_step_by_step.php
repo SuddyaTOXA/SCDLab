@@ -1,61 +1,64 @@
 <?php
-	$quote = trim(get_sub_field('text')) ? get_sub_field('text') : '';
-	$quote_box = get_sub_field('box');
-	$img_size = 'medium';
-	$img_id = $img_class = $name = $position = '';
+	$title      = trim(get_sub_field('title')) ? get_sub_field('title') : '';
+	$desc       = trim(get_sub_field('description')) ? get_sub_field('description') : '';
+    $steps      = (get_sub_field('steps') || is_array(get_sub_field('steps')) || count(get_sub_field('steps')) > 0) ? get_sub_field('steps') : '';
+    $img_size   = 'medium';
+    $name = $icon = '';
 
-	if ($quote_box && is_array($quote_box) && count($quote_box) > 0) {
-		$name = trim($quote_box['name']) ? $quote_box['name'] : '';
-		$position = trim($quote_box['position']) ? $quote_box['position'] : '';
-		$img_id = trim($quote_box['photo']['id']) ? $quote_box['photo']['id'] : '';
-		$img_class = ($quote_box['photo']['width'] > $quote_box['photo']['height']) ? 'wider' : 'hegher';
-	}
-
-	if ($quote) :
+	if ($title || $desc || $steps) :
 		?>
-		<section class="section-blockquote inverse">
-			<div class="container">
-				<div class="blockquote-wrap">
-					<div class="blockquote-table">
-						<div class="inner-box">
-							<div class="blockquote-box">
-								<div class="content">
-									<?php echo $quote; ?>
-								</div>
-								<?php if ($name || $position) { ?>
-									<div class="blockquote-author">
-										<?php if ($name) { ?>
-											<span class="name">– <?php echo $name; ?></span>
-										<?php } ?>
-										<?php if ($position) { ?>
-											<span class="position"><?php echo $position; ?></span>
-										<?php } ?>
-									</div>
-								<?php } ?>
-							</div>
-						</div>
-						<?php if ($img_id) { ?>
-							<div class="inner-box">
-								<?php if ($img_id) { ?>
-									<div class="blockquote-photo-img centered-img" data-centered-img>
-										<?php echo wp_get_attachment_image($img_id, $img_size,false, array('class' => $img_class)); ?>
-									</div>
-								<?php } ?>
-								<?php if ($name || $position) { ?>
-									<div class="blockquote-author">
-										<?php if ($name) { ?>
-											<span class="name">– <?php echo $name; ?></span>
-										<?php } ?>
-										<?php if ($position) { ?>
-											<span class="position"><?php echo $position; ?></span>
-										<?php } ?>
-									</div>
-								<?php } ?>
-							</div>
-						<?php } ?>
-					</div>
-				</div>
-			</div>
-		</section>
+        <section class="section-design-thinking inverse">
+            <div class="container">
+                <?php
+                    if ($title)
+                        echo '<h2 class="section-thin-title">'.$title.'</h2>';
+
+                    if ($desc)
+                        echo '<div class="section-desc">'.$desc.'</div>';
+
+                    if ($steps) :
+                        echo '<ul class="development-stages-list">';
+                            foreach ($steps as $steep) :
+	                            $name = trim($steep['name']) ? $steep['name'] : '';
+	                            $icon = trim($steep['icon']) ? $steep['icon'] : '';
+	                            $img_id = $img_class = '';
+
+	                            if (strtolower($icon) === 'other') {
+		                            $img_data = $steep['image'];
+		                            $img = ($img_data && is_array($img_data) && count($img_data) > 0 ) ? $img_data : '';
+		                            if ($img) {
+			                            $img_class = ( $img['width'] > $img['height'] ) ? 'wider' : 'higher';
+			                            $img_id    = trim( $img['id'] ) ? $img['id'] : '';
+		                            }
+                                }
+
+	                            if ($name || $icon) {
+	                                ?>
+                                    <li>
+                                        <div class="stage-box">
+                                            <div class="stage-icon-wrap">
+                                                <?php
+                                                    if (strtolower($icon) === 'other') {
+	                                                    echo wp_get_attachment_image( $img_id, $img_size, false, array( 'class' => $img_class ) );
+                                                    } else {
+                                                        echo '<span class="custom-icon '.$icon.'"></span>';
+                                                    }
+                                                ?>
+                                            </div>
+                                            <?php
+                                                if ($name)
+                                                    echo '<h4 class="stage-name">'.$name.'</h4>';
+                                            ?>
+                                        </div>
+                                    </li>
+                                    <?php
+                                }
+
+                            endforeach;
+                        echo '</ul>';
+                    endif;
+                ?>
+            </div>
+        </section>
 		<?php
 	endif;

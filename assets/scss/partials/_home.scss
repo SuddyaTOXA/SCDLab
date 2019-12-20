@@ -848,6 +848,16 @@
           height: 44%;
           @include css3-prefix('transform', 'translate(-50%, -50%)');
         }
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          max-width: 44%;
+          max-height: 44%;
+          width: auto;
+          height: auto;
+          @include css3-prefix('transform', 'translate(-50%, -50%)');
+        }
       }
         .stage-name {
           margin-bottom: 12px;

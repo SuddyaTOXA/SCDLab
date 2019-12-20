@@ -7,8 +7,12 @@
 	if ($quote_box && is_array($quote_box) && count($quote_box) > 0) {
 		$name = trim($quote_box['name']) ? $quote_box['name'] : '';
 		$position = trim($quote_box['position']) ? $quote_box['position'] : '';
-		$img_id = trim($quote_box['photo']['id']) ? $quote_box['photo']['id'] : '';
-		$img_class = ($quote_box['photo']['width'] > $quote_box['photo']['height']) ? 'wider' : 'hegher';
+		$img_data = $quote_box['photo'];
+		$img = ($img_data && is_array($img_data) && count($img_data) > 0 ) ? $img_data : '';
+		if ($img) {
+			$img_id    = trim( $img['id'] ) ? $img['id'] : '';
+			$img_class = ( $img['width'] > $img['height'] ) ? 'wider' : 'higher';
+		}
 	}
 
 	if ($quote) :
