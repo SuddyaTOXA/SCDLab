@@ -4,7 +4,19 @@
  */
 get_header(); ?>
 
-    <section class="section-banner inverse">
+
+
+<?php
+
+    get_template_part( 'templates/section', 'banner' );
+
+    while ( the_flexible_field('flexible_content') ) :
+        get_template_part( 'templates/'. get_row_layout() );
+    endwhile;
+?>
+
+<?php /*
+     <section class="section-banner inverse">
         <div class="container">
             <div class="content-box">
                 <h1 class="hero-title">Page tagline and description</h1>
@@ -18,13 +30,7 @@ get_header(); ?>
         </div>
     </section>
 
-<?php
-    while ( the_flexible_field('flexible_content') ) :
-        get_template_part( 'templates/'. get_row_layout() );
-    endwhile;
-?>
 
-<?php /*
     <section class="section-content">
         <div class="container">
             <h2 class="section-title">What to expect?</h2>

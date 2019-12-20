@@ -4,7 +4,20 @@
  */
 get_header(); ?>
 
-    <section class="section-banner">
+
+
+
+<?php
+    get_template_part( 'templates/section', 'banner' );
+
+    while ( the_flexible_field('flexible_content') ) :
+        get_template_part( 'templates/'. get_row_layout() );
+    endwhile;
+?>
+
+<?php /*
+
+     <section class="section-banner">
         <div class="container">
             <div class="img-box">
                 <img class="hero-img" src="<?php echo bloginfo('template_directory'); ?>/img/services_hero@2x.png" alt="Hero">
@@ -123,5 +136,5 @@ get_header(); ?>
             </div>
         </div>
     </section>
-
+*/ ?>
 <?php get_footer(); ?>

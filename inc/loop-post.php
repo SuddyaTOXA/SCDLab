@@ -22,11 +22,11 @@ if ( has_post_thumbnail() ) {
 	<div class="article-box">
 		<div class="img-box">
 			<a href="<?php echo esc_url($url); ?>" class="centered-img" title="<?php echo esc_attr($title); ?>" data-centered-img>
-				<?php
-					if ( $img_id ) {
-						echo wp_get_attachment_image( $img_id, $img_size, false, array('class' => $img_class) );
-					}
-				?>
+            <?php
+                if ( $img_id ) {
+                    echo wp_get_attachment_image( $img_id, $img_size, false, array('class' => $img_class) );
+                }
+            ?>
 			</a>
 		</div>
 		<div class="content-box">

@@ -4,7 +4,19 @@
  */
 get_header(); ?>
 
-    <section class="section-banner hero">
+
+
+<?php
+    get_template_part( 'templates/section', 'banner' );
+
+    while ( the_flexible_field('flexible_content') ) :
+        get_template_part( 'templates/'. get_row_layout() );
+    endwhile;
+?>
+
+<?php /*
+
+     <section class="section-banner hero">
         <div class="container">
             <div class="img-box">
                 <img class="hero-img" src="<?php echo bloginfo('template_directory'); ?>/img/hero@2x.png" alt="Hero">
@@ -26,14 +38,6 @@ get_header(); ?>
         </div>
     </section>
 
-
-<?php
-    while ( the_flexible_field('flexible_content') ) :
-        get_template_part( 'templates/'. get_row_layout() );
-    endwhile;
-?>
-
-<?php /*
     <section class="section-blockquote inverse">
         <div class="container">
             <div class="blockquote-wrap">
@@ -196,7 +200,6 @@ get_header(); ?>
             </div>
         </div>
     </section>
-*/ ?>
 
     <section class="section-lab-services">
         <div class="container">
@@ -299,5 +302,7 @@ get_header(); ?>
             <a href="#" class="btn internal-link" title="More about the lab’s services"><span>More about the lab’s services</span></a>
         </div>
     </section>
+*/ ?>
+
 
 <?php get_footer(); ?>

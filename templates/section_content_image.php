@@ -66,7 +66,7 @@
                                         }
 
                                         if ($label && $link) {
-                                            echo '<li><a href="' . $link . '" class="'.$btn_style.'" title="' . esc_attr($label) . '" ' . $target . '>' . $label . '</a></li>';
+                                            echo '<li><a href="' . $link . '" class="'.$btn_style.'" title="' . esc_attr($label) . '" ' . $target . '><span>' . $label . '</span></a></li>';
                                         }
                                     endif;
                                 endforeach;
