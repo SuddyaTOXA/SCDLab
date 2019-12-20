@@ -18,6 +18,13 @@ get_header(); ?>
         </div>
     </section>
 
+<?php
+    while ( the_flexible_field('flexible_content') ) :
+        get_template_part( 'templates/'. get_row_layout() );
+    endwhile;
+?>
+
+<?php /*
     <section class="section-content">
         <div class="container">
             <h2 class="section-title">What to expect?</h2>
@@ -29,6 +36,7 @@ get_header(); ?>
             </ul>
         </div>
     </section>
+
 
     <section class="section-article-list">
         <div class="container">
@@ -73,5 +81,6 @@ get_header(); ?>
             </ul>
         </div>
     </section>
+*/ ?>
 
 <?php get_footer(); ?>

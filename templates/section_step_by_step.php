@@ -14,7 +14,7 @@
                         echo '<h2 class="section-thin-title">'.$title.'</h2>';
 
                     if ($desc)
-                        echo '<div class="section-desc">'.$desc.'</div>';
+                        echo '<div class="section-desc"><p>'.$desc.'</p></div>';
 
                     if ($steps) :
                         echo '<ul class="development-stages-list">';

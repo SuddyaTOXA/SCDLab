@@ -18,6 +18,16 @@ get_header(); ?>
         </div>
     </section>
 
+
+
+<?php
+    while ( the_flexible_field('flexible_content') ) :
+        get_template_part( 'templates/'. get_row_layout() );
+    endwhile;
+?>
+
+<?php /*
+
     <section class="section-content">
         <div class="container">
             <h2 class="section-title">Have a student-facing tool you'd like to discuss?</h2>
@@ -34,11 +44,12 @@ get_header(); ?>
     <section class="section-form">
         <div class="container">
             <h3 class="box-title">Contact us now to begin the conversation.</h3>
+            <div class="form-wrap"></div>
         </div>
     </section>
 
 
-<?php /*
+
  user-natural : User natural
 design-process : Design process
 creativity-idea : Creativity idea

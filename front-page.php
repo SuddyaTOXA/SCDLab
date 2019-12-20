@@ -127,7 +127,6 @@ get_header(); ?>
 
         </div>
     </section>
-*/ ?>
 
     <section class="section-work-with-lab">
         <div class="container">
@@ -169,7 +168,6 @@ get_header(); ?>
         </div>
     </section>
 
-<?php /*
     <section class="section-blockquote inverse">
         <div class="container">
             <div class="blockquote-wrap">

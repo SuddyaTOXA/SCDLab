@@ -19,7 +19,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <hr class="hr-line">
+    <hr class="hr-line blue">
 
     <section class="section-info">
         <div class="container">

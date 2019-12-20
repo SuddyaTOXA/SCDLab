@@ -45,7 +45,7 @@
                                         $label      = trim($btn['label']) ? $btn['label'] : '';
                                         $link_type  = $btn['link_type'] ? $btn['link_type'] : '';
                                         $target     = $btn['target'] ? 'target="_blank"' : '';
-                                        $btn_style  = '';
+                                        $btn_style  = $link = '';
 
                                         if (strtolower($btn['button_style']) === 'underlined') {
                                             $btn_style = 'btn-small';
