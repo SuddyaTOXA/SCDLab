@@ -14,6 +14,9 @@
                     if ($form_id)
                         echo '<div class="form-wrap">'.do_shortcode('[contact-form-7 id="'.$form_id.'" title="'.esc_attr(strip_tags($title)).'"]').'</div>';
                 ?>
+                <ul class="form-list">
+                    <li></li>
+                </ul>
             </div>
         </section>
 		<?php

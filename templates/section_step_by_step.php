@@ -7,7 +7,7 @@
 
 	if ($title || $desc || $steps) :
 		?>
-        <section class="section-design-thinking">
+        <section class="section-design-thinking inverse">
             <div class="container">
                 <?php
                     if ($title)

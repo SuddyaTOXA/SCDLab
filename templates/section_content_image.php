@@ -1,9 +1,8 @@
 <?php
-	$image_position = get_sub_field('image_position');
 	$content_box    = get_sub_field('content_box');
 	$img_box        = get_sub_field('img_box');
     $img_size       = 'full';
-    $title = $content = $buttons = $img_data = $img = $img_id = $img_class = $image_overlay = '';
+    $title = $content = $buttons = $img_data = $img = $img_id = $img_class = $image_overlay = $image_type = $gradient_class = '';
 
 	if ($content_box && is_array($content_box) && count($content_box) > 0) {
         $title      = trim($content_box['title']) ? $content_box['title'] : '';
@@ -12,12 +11,13 @@
     }
 
 	if ($img_box && is_array($img_box) && count($img_box) > 0) {
-	    $img_data = $img_box['image'];
-	    $img = ($img_data && is_array($img_data) && count($img_data) > 0 ) ? $img_data : '';
-		if ($img) {
-			$img_id        = trim( $img['id'] ) ? $img['id'] : '';
-			$img_class     = ( $img['width'] > $img['height'] ) ? 'wider' : 'higher';
-			$image_overlay = trim( $img_box['image_overlay'] ) ? $img_box['image_overlay'] : '';
+		$image_type     = $img_box['type'];
+		$gradient_class = ($img_box['gradient'] && strtolower($img_box['gradient']) === 'left') ? 'gradient left-right' : 'gradient right-left';
+	    $img_data       = $img_box['image'];
+
+		if ($img_data && is_array($img_data) && count($img_data) > 0 ) {
+			$img_id        = trim( $img_data['id'] ) ? $img_data['id'] : '';
+			$img_class     = ( $img_data['width'] > $img_data['height'] ) ? 'wider' : 'higher';
 		}
     }
 
@@ -26,8 +26,11 @@
         <section class="section-info <?php echo $image_overlay; ?>">
             <div class="container">
                 <?php
-                    if ($img_id)
-                        echo '<div class="img-box">'.wp_get_attachment_image($img_id, $img_size,false, array('class' => $img_class)).'</div>';
+                if ($img_id && strtolower($image_type) === 'type_bg')
+	                echo '<div class="centered-img '.$gradient_class.'">'.wp_get_attachment_image($img_id, $img_size,false, array('class' => $img_class)).'</div>';
+
+                    if ($img_id && strtolower($image_type) === 'type_img')
+                        echo '<div class="img-box '.$gradient_class.'">'.wp_get_attachment_image($img_id, $img_size,false, array('class' => $img_class)).'</div>';
                 ?>
                 <div class="content-box">
                     <?php

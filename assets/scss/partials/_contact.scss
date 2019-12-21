@@ -18,3 +18,87 @@
 .section-form {
   padding: 28px 0 200px;
 }
+
+.form-wrap {
+  max-width: 635px;
+  .wpcf7-form-control-wrap {
+    display: block;
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    @include font($bold, $size-big, $font-main, $line-height-heading-2);
+    color: $color-text;
+    span {
+      padding-left: 3px;
+      color: red;
+    }
+  }
+  .input-style[name="your-name"] {
+    max-width: 445px;
+  }
+}
+
+.form-list {
+  > li {
+    &:not(:last-child) {
+      margin-bottom: 34px;
+    }
+    :last-child {
+      .btn {
+        margin-top: -4px;
+      }
+    }
+  }
+}
+
+.goo-form-wrap {
+  label {
+    display: block;
+    margin-bottom: 8px;
+    @include font($bold, $size-big, $font-main, $line-height-heading-2);
+    color: $color-text;
+  }
+  .ff-item {
+    margin-top: 0;
+    margin-bottom: 34px;
+  }
+  .ff-checkbox {
+    > label {
+      margin-bottom: 14px;
+    }
+  }
+  .ff-description {
+    margin-bottom: 36px;
+  }
+  .ff-form {
+    .form-check {
+      display: inline-block;
+      width: 49%;
+      @include calc('width','50% - 6px');
+      vertical-align: top;
+      margin-bottom: 10px;
+      padding-right: 30px;
+    }
+    .form-check-other {
+      .form-control {
+        display: inline-block;
+        width: 90%;
+        @include calc('width','100% - 50px');
+      }
+    }
+    .form-check-label {
+      padding-left: 10px;
+      font-size: $size-small;
+      font-weight: $normal;
+    }
+  }
+  .ff-button-bar {
+    margin-bottom: -22px;
+    .btn {
+      margin-right: 22px;
+      margin-bottom: 22px;
+      min-width: 264px;
+    }
+  }
+}

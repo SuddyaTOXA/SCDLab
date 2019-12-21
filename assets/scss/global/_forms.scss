@@ -1,16 +1,15 @@
+.goo-form-wrap .form-control,
 .input-style {
   display: block;
   width: 100%;
-  min-height: 57px;
+  min-height: 46px;
   height: auto;
   margin: 0;
-  padding: 10px 0;
-  @include font($normal, 16px, $font-secondary, 1);
-  color: $white;
-  background-color: transparent;
-  border: 2px solid $white;
-  border-left: none;
-  border-right: none;
+  padding: 9px 15px;
+  @include font($normal, $size-main, $font-secondary, $line-height-heading);
+  color: $black;
+  background-color: $white;
+  border: 1px solid #cccccc;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -18,86 +17,97 @@
   @include border-radius(0);
   @include transition($transition-other);
 }
-
+.goo-form-wrap textarea.form-control,
 textarea.input-style {
   overflow-y: auto;
   resize: none;
-  padding: 15px 0;
-  //width: 100%;
-  height: 277px;
-  line-height: $line-height;
-  //color: $white;
-  //@include font($normal, 16px, $font-secondary, $line-height);
-  //border: 1px solid $white;
-  //border-left: none;
-  //border-right: none;
-  //box-shadow: none;
-  //-webkit-appearance: none;
-  //-moz-appearance: none;
-  //appearance: none;
-  //@include border-radius(0);
+  padding: 9px 15px;
+  height: 340px;
+  @include font($normal, $size-main, $font-secondary, $line-height);
   @media all and ($mobile) {
     height: 160px;
   }
 }
+.goo-form-wrap textarea.form-control {
+  height: 220px;
+}
+
 
 input::-webkit-input-placeholder {
   font-family: $font-secondary;
   font-weight: $normal;
-  color: $white;
+  color: $c-gray;
   @include transition($transition-other);
 }
 input::-moz-placeholder {
   font-family: $font-secondary;
   font-weight: $normal;
-  color: $white;
+  color: $c-gray;
   @include transition($transition-other);
 }
 
 input:-ms-input-placeholder {
   font-family: $font-secondary;
   font-weight: $normal;
-  color: $white;
+  color: $c-gray;
   @include transition($transition-other);
 }
 //input#email_address_0:-moz-placeholder,
 input:-moz-placeholder {
   font-family: $font-secondary;
   font-weight: $normal;
-  color: $white;
+  color: $c-gray;
   @include transition($transition-other);
 }
 //
 textarea::-webkit-input-placeholder {
   font-family: $font-secondary;
   font-weight: $normal;
-  color: $white;
+  color: $c-gray;
   @include transition($transition-other);
 }
 
 textarea::-moz-placeholder {
   font-family: $font-secondary;
   font-weight: $normal;
-  color: $white;
+  color: $c-gray;
   @include transition($transition-other);
 }
 
 textarea:-ms-input-placeholder {
   font-family: $font-secondary;
   font-weight: $normal;
-  color: $white;
+  color: $c-gray;
   @include transition($transition-other);
 }
 
 textarea:-moz-placeholder {
   font-family: $font-secondary;
   font-weight: $normal;
-  color: $white;
+  color: $c-gray;
   @include transition($transition-other);
 }
 
+.goo-form-wrap .form-control:focus::-webkit-input-placeholder,
+.input-style:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.goo-form-wrap .form-control:focus::-moz-placeholder,
+.input-style:focus::-moz-placeholder {
+  opacity: 0;
+}
+.goo-form-wrap .form-control:focus:-ms-input-placeholder,
+.input-style:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.goo-form-wrap .form-control:focus:-moz-placeholder,
+.input-style:focus:-moz-placeholder {
+  opacity: 0;
+}
+
+
 span.wpcf7-not-valid-tip {
-  font-size: 22px;
+  font-size: $size-smaller;
 }
 div.wpcf7-validation-errors,
 div.wpcf7-acceptance-missing,
@@ -107,14 +117,14 @@ div.wpcf7-mail-sent-ok {
   margin-left: 0;
   margin-right: 0;
 }
-div.wpcf7-response-output {
-  //background-color: #ff0000;
-}
+//div.wpcf7-response-output {
+//  background-color: #ff0000;
+//}
 div.wpcf7-mail-sent-ok {
-  background-color: #398f14;
+  background-color: green;
 }
 div.wpcf7-validation-errors,
 div.wpcf7-acceptance-missing {
-  border-color: #c3ba38;
-  background-color: #c3ba38;
+  border-color: yellow;
+  background-color: yellow;
 }
