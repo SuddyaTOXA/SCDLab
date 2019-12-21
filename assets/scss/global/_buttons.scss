@@ -16,9 +16,11 @@ a.btn, .btn {
   @media all and ($mobile-small) {
     font-size: 16px;
   }
-  &:hover,
-  &:focus {
-    background: #005296;
+  @media all and ($start-hover) {
+    &:hover,
+    &:focus {
+      background: #005296;
+    }
   }
   &.internal-link {
     white-space: nowrap;
@@ -29,6 +31,7 @@ a.btn, .btn {
     position: relative;
     text-align: left;
     max-width: 445px;
+    min-width: 264px;
     width: 100%;
     @media all and ($mobile) {
       padding-left: 14px;
@@ -43,6 +46,21 @@ a.btn, .btn {
       right: 12px;
       top: 50%;
       @include css3-prefix('transform', 'translateY(-50%)');
+    }
+  }
+  .inverse & {
+    color: $c-blue;
+    background: $white;
+    &.internal-link {
+      &:after {
+        color: $c-blue;
+      }
+    }
+    @media all and ($start-hover) {
+      &:hover,
+      &:focus {
+        background: #e2e2e2;
+      }
     }
   }
 }
@@ -99,13 +117,18 @@ a.btn-small, .btn-small {
       @include css3-prefix('transition', 'max-width 0.35s ease-out');
     }
   }
-  &:hover,
-  &:focus {
-    span {
-      &:after {
-        max-width: 0;
+  @media all and ($start-hover) {
+    &:hover,
+    &:focus {
+      span {
+        &:after {
+          max-width: 0;
+        }
       }
     }
+  }
+  .inverse & {
+    color: $white;
   }
 }
 

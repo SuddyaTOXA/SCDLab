@@ -86,10 +86,12 @@
   }
   a {
     color: $color-text;
-    &:hover,
-    &:focus {
-      opacity: .8;
-      text-decoration: none;
+    @media all and ($start-hover) {
+      &:hover,
+      &:focus {
+        opacity: .8;
+        text-decoration: none;
+      }
     }
   }
 

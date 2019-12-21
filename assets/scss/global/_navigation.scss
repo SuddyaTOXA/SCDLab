@@ -78,11 +78,13 @@
           }
         }
       }
-      &:hover {
-        .sub-menu {
-          opacity: 1;
-          visibility: visible;
-          margin: 0;
+      @media all and ($start-hover) {
+        &:hover {
+          .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            margin: 0;
+          }
         }
       }
     }

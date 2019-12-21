@@ -30,8 +30,6 @@
     }
     a {
       color: $color-text3;
-      &:hover,
-      &:focus {}
     }
   }
 }
@@ -106,8 +104,10 @@
           font-weight: $normal;
           text-transform: initial;
           text-decoration: underline;
-          &:hover, &:focus {
-            text-decoration: none;
+          @media all and ($start-hover) {
+            &:hover, &:focus {
+              text-decoration: none;
+            }
           }
         }
       }

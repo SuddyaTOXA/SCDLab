@@ -1,19 +1,10 @@
-<?php get_header(); ?>
+<?php
+get_header();
 
-    <section class="section section-content">
-		<div class="container">
-			<div class="content">
+    get_template_part( 'templates/section', 'banner' );
 
-				<?php 
-					if ( have_posts() ) : while ( have_posts() ) : the_post();
+    while ( the_flexible_field('flexible_content') ) :
+        get_template_part( 'templates/'. get_row_layout() );
+    endwhile;
 
-			    		the_content();
-			    		
-			    	endwhile; else: endif; 
-			    ?>
-
-			</div>
-		</div>
-    </section>
-
-<?php get_footer(); ?>
+get_footer();

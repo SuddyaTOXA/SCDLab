@@ -13,7 +13,7 @@
 		            echo '<h2 class="section-title">'.$title.'</h2>';
 
 	            if ($content)
-		            echo '<div class="content">'.$content.'</div>';
+		            echo '<div class="content big">'.$content.'</div>';
 
 	            if ($buttons && is_array($buttons) && count($buttons) > 0) :
 		            echo '<ul class="btn-list">';

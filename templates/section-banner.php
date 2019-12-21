@@ -16,18 +16,20 @@ if ($banner && is_array($banner) && count($banner) > 0) :
 		if ($img_data && is_array($img_data) && count($img_data) > 0) {
 			$img_id    = trim( $img_data['id'] ) ? $img_data['id'] : '';
 			$img_class = ( $img_data['width'] > $img_data['height'] ) ? 'wider' : 'higher';
-			$page_type = 'inverse';
 		}
 
 		if (strtolower($hero_type) === 'type_bg') {
 			$img_size = 'full';
+			$page_type = 'inverse';
 		} else {
-			$img_size = 'large';
+			$img_size = 'full';
+			$page_type = 'hero';
+			$img_class .= ' hero-other-img';
 		}
 
 
 	} else {
-		$page_type = 'hero';
+		$page_type = 'hero hero-main';
 		$first_image = $banner['first_image'];
 		$second_image = $banner['second_image'];
 
@@ -47,10 +49,10 @@ if ($banner && is_array($banner) && count($banner) > 0) :
 
 	if ($img_id || $first_id || $second_id || $title || $description) :
 		?>
-		<section class="section-banner <?php echo $page_type; ?>>">
+		<section class="section-banner <?php echo $page_type; ?>">
 			<div class="container">
 				<?php
-					if ($img_id || $first_id || $second_id) {
+					if (($img_id && strtolower($hero_type) === 'type_img') || $first_id || $second_id) {
 						?>
 						<div class="img-box">
 							<?php
@@ -70,20 +72,22 @@ if ($banner && is_array($banner) && count($banner) > 0) :
 					}
 				?>
 				<div class="content-box">
-					<?php
-						if ($title)
-							echo '<h1 class="hero-title">'.$title.'</h1>';
+                    <div class="inner-box">
+                        <?php
+                            if ($title)
+                                echo '<h1 class="hero-title">'.$title.'</h1>';
 
-						if ($description)
-							echo '<div class="content big">'.$description.'</div>';
-					?>
+                            if ($description)
+                                echo '<div class="content big">'.$description.'</div>';
+                        ?>
+                    </div>
 				</div>
 				<?php
-					if (strtolower($hero_type) === 'type_bg') {
-						if ($img_id) {
-							echo '<div class="centered-img">' . wp_get_attachment_image( $img_id, $img_size, false, array( 'class' => $img_class ) ) . '</div>';
-						}
+				if (strtolower($hero_type) === 'type_bg') {
+					if ($img_id) {
+						echo '<div class="centered-img">' . wp_get_attachment_image( $img_id, $img_size, false, array( 'class' => $img_class ) ) . '</div>';
 					}
+				}
 				?>
 			</div>
 		</section>
