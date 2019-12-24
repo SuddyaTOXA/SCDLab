@@ -120,6 +120,19 @@
   cursor: pointer;
   font-size: 26px;
   background-color: $color-bg2;
+  &:before {
+    position: absolute;
+    content: 'menu';
+    top: 50%;
+    right: 76px;
+    color: $white;
+    font-weight: $bold;
+    font-size: $size-smaller;
+    line-height: $line-height-heading;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include css3-prefix('transform', 'translate(0, -50%)');
+  }
   .admin-bar & {
     top: 46px;
   }

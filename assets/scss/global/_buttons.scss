@@ -38,6 +38,9 @@ a.btn, .btn {
       padding-right: 40px;
       letter-spacing: .025em;
     }
+    @media all and ($mobile-small) {
+      min-width: 100%;
+    }
     &:after {
       position: absolute;
       content: "\e902";

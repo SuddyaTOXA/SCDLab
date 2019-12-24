@@ -56,6 +56,47 @@ jQuery(document).ready(function($) {
             });
         }
     });
+
+
+    //for input OTHER value
+    $(function () {
+       if ($('input[name="discovery-or-research[]"]').length || $('input[name="your-stakeholders[]"]').length) {
+           $(window).on('load', function () {
+               $('.your-stakeholders_other, .discovery-or-research_other').each(function (i) {
+                   $(this).find('input[type="text"]').prop("disabled", true);
+               })
+           });
+
+           $('input[name="discovery-or-research[]"], input[name="your-stakeholders[]"]').change(function() {
+               if (this.checked && this.value.toLowerCase() === 'other') {
+
+                   if (this.name === 'your-stakeholders[]') {
+                       $('.your-stakeholders_other').addClass('show-input').find('input[type="text"]').prop("disabled", false);
+                       setTimeout(function () {
+                           $('#your-stakeholders_other').focus();
+                       }, 350);
+                   }
+
+                   if (this.name === 'discovery-or-research[]') {
+                       $('.discovery-or-research_other').addClass('show-input').find('input[type="text"]').prop("disabled", false);
+                       setTimeout(function () {
+                           $('#discovery-or-research_other').focus();
+                       }, 350);
+                   }
+
+               } else if(this.value.toLowerCase() === 'other') {
+                   if (this.name === 'your-stakeholders[]') {
+                       $('.your-stakeholders_other').removeClass('show-input').find('input[type="text"]').prop("disabled", true).val('');
+                   }
+
+                   if (this.name === 'discovery-or-research[]') {
+                       $('.discovery-or-research_other').removeClass('show-input').find('input[type="text"]').prop("disabled", true).val('');
+                   }
+               }
+           });
+       }
+    });
+
 /*
     //for submenu
     $(function () {
