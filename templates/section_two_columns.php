@@ -3,7 +3,7 @@
     $content    = trim(get_sub_field('content')) ? get_sub_field('content') : '';
     $buttons    = (get_sub_field('buttons') && is_array(get_sub_field('buttons')) && count(get_sub_field('buttons')) > 0) ? get_sub_field('buttons') : '';
     $img        = get_sub_field('image');
-    $img_size   = 'medium';
+    $img_size   = 'medium_large';
     $img_class  = $img_id = '';
 
     if ($img && is_array($img) && count($img) > 0) {

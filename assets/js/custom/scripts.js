@@ -97,6 +97,76 @@ jQuery(document).ready(function($) {
        }
     });
 
+
+    function simulateBGCover(images, boxClass) {
+        images.each(function (i) {
+
+            var img = $(this),
+                box = img.closest(boxClass),
+                natWidth = img.context.naturalWidth,
+                natHeight = img.context.naturalHeight,
+                width = box[0].clientWidth,
+                height =box[0].clientHeight,
+                factorW = natWidth / natHeight,
+                factorH = natHeight / natWidth,
+                newWidth = 0,
+                newHeight = 0;
+
+
+            if (width > height) {
+                // console.log('WIDER !!!!');
+                if (natWidth > natHeight) {
+                    // console.log('wider image');
+
+                    newWidth = factorW * height;
+                    newHeight = height;
+
+                    if (width > newWidth) {
+                        // console.log(width + '   '+ newWidth);
+
+                        newWidth = width;
+                        newHeight = factorH * width;
+                    }
+                } else {
+                    // console.log('higher image');
+                    newWidth = width;
+                    newHeight = factorH * width;
+
+                    if (height > newHeight) {
+                        newHeight = height;
+                        newWidth = factorW * height;
+                    }
+                }
+            } else {
+                // console.log('HIGHER');
+                if (natWidth > natHeight) {
+                    // console.log('wider image');
+
+                    newWidth = factorW * height;
+                    newHeight = height;
+                } else {
+                    // console.log('higher image');
+
+                    newWidth = width;
+                    newHeight = factorH * width;
+                }
+            }
+
+            img.css('width', newWidth);
+            img.css('height', newHeight);
+        });
+    }
+
+    $(function () {
+        if ($('.centered-img img').length) {
+            $(window).on('load lazyloaded resize', function () {
+                setTimeout(function () {
+                    simulateBGCover($('.centered-img img'), '.centered-img');
+                },50);
+            });
+        }
+    });
+
 /*
     //for submenu
     $(function () {

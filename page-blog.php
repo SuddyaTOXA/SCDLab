@@ -2,37 +2,61 @@
 /**
  * Template Name: Blog
  */
-get_header(); ?>
+get_header();
 
-    <div class="content-wrap">
-		<div class="content">
-			<?php global $wp_query;
+get_template_part( 'templates/section', 'banner' );
 
-                $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-                $args = array(
-                    'post_type'     => 'post',
-                    'post_status'   => 'publish',
-                    'orderby'       => 'date',
-                    'order'         => 'DESC',
-                    'paged'         => $paged,
-                );
-                $new_query = new WP_Query( $args );
+if (the_flexible_field('flexible_content')) :
 
-                if ( $new_query->have_posts() ) : while ( $new_query->have_posts() ) : $new_query->the_post();
+	while ( the_flexible_field('flexible_content') ) :
+		get_template_part( 'templates/'. get_row_layout() );
+	endwhile;
+
+else :
+
+	get_template_part( 'templates/section', 'singular-content' );
+
+endif;
+
+?>
+<section class="section-article-list">
+    <div class="container">
+    <?php
+        global $wp_query;
+
+        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+        $args = array(
+            'post_type'     => 'post',
+            'post_status'   => 'publish',
+            'orderby'       => 'date',
+            'order'         => 'DESC',
+            'paged'         => $paged,
+        );
+        $new_query = new WP_Query( $args );
+
+        if ( $new_query->have_posts() ) :
             ?>
-				<?php get_template_part('loop', 'post'); ?>
+            <ul class="article-list">
+                <?php
+                while ( $new_query->have_posts() ) : $new_query->the_post();
 
-			<?php endwhile; ?>
+                    get_template_part( 'inc/loop', 'post' );
 
-                <?php wp_pagenavi( array( 'query' => $new_query ) ); ?>
+                endwhile;
+                ?>
+            </ul>
+            <?php
 
-            <?php else: echo "<p class='no-results'>".__('Sorry, no articles found...')."</p>"; 
-                endif; wp_reset_query(); ?>
-			 
-		</div><!--/content-->	
+	        get_template_part('inc/pagination');
 
-		<?php get_sidebar(); ?>
+        else :
+	        echo "<p class='no-results'>".__('Sorry, no articles found...','scd-lab')."</p>";
+        endif;
 
-	</div><!--/content-wrap-->
+        wp_reset_query();
+    ?>
+    </div>
+</section>
+<?php
 
-<?php get_footer(); ?>
+get_footer();

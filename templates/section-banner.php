@@ -2,11 +2,11 @@
 $show_hero  = get_field('show_hero');
 $banner     = $show_hero ? get_field('banner') : '';
 $page_type  = 'other';
-$img_size   = 'full';
+$img_size   = '2048x2048';
 $title = $description = $hero_type = $image = $first_image = $second_image = $img_id = $img_class = $first_id = $first_class = $second_id = $second_class = '';
 
 if ($banner && is_array($banner) && count($banner) > 0) :
-	$title          = trim($banner['title']) ? $banner['title'] : '';
+	$title          = trim($banner['title']) ? $banner['title'] : get_the_title();
 	$description    = trim($banner['description']) ? $banner['description'] : '';
 	$hero_type      = (isset($banner['hero_type']) && $banner['hero_type']) ? $banner['hero_type'] : '';
 
@@ -19,10 +19,10 @@ if ($banner && is_array($banner) && count($banner) > 0) :
 		}
 
 		if (strtolower($hero_type) === 'type_bg') {
-			$img_size = 'full';
+//			$img_size = 'full';
 			$page_type = 'inverse';
 		} else {
-			$img_size = 'full';
+//			$img_size = 'full';
 			$page_type = 'hero';
 			$img_class .= ' hero-other-img';
 		}

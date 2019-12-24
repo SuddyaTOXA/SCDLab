@@ -220,6 +220,9 @@
       padding: 80px 0;
       width: 100%;
       height: 480px;
+      @media all and ($mobile) {
+        height: 320px;
+      }
       .inner-box {
         display: table-cell;
         vertical-align: middle;
@@ -266,6 +269,7 @@
 
 
   &.hero {
+    min-height: 520px;
     padding: 66px 0 84px;
     background-color: $white;
     @media all and ($tablet) {
@@ -433,6 +437,13 @@
       }
     }
   }
+
+  & + .section-article-list {
+    padding-top: 72px;
+    @media all and ($mobile) {
+      padding-top: 38px;
+    }
+  }
 }
 
 
@@ -534,12 +545,12 @@
         padding-bottom: 0;
         background-color: transparent;
         img {
-          &.wider {
-
-          }
-          &.higher {
-            max-height: 100%;
-          }
+          //&.wider {
+          //
+          //}
+          //&.higher {
+          //  max-height: 100%;
+          //}
         }
       }
     }

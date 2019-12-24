@@ -19,7 +19,7 @@ a.btn, .btn {
   @media all and ($start-hover) {
     &:hover,
     &:focus {
-      background: #005296;
+      background: $c-blue-h;
     }
   }
   &.internal-link {

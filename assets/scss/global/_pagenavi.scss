@@ -1,0 +1,68 @@
+.pagenavi-block {
+  text-align: center;
+  &:not(:empty) {
+    margin-top: 75px;
+  }
+}
+
+.wp-pagenavi {
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  .pages {
+    display: none;
+  }
+  .extend,
+  .current,
+  .page {
+    display: inline-block;
+    margin: 0 0 14px 0;
+    padding: 19px 15px;
+    @include font($semi-bold, $size-small, $font-main, $line-height-heading-2);
+    color: $c-blue;
+    vertical-align: top;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .extend,
+  .current {
+    color: $color-text;
+    cursor: default;
+  }
+  a {
+    text-decoration: none;
+    @media all and ($start-hover) {
+      &:hover,
+      &:focus {
+        color: $c-blue-dark;
+      }
+    }
+
+    &.first,
+    &.last,
+    &.previouspostslink,
+    &.nextpostslink {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+      min-width: 60px;
+      margin: 0 7px 14px;
+      padding: 19px 25px;
+      @include font($semi-bold, $size-small, $font-main, $line-height-heading-2);
+      color: $white;
+      text-align: center;
+      cursor: pointer;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      background-color: $c-blue;
+      vertical-align: top;
+      @media all and ($start-hover) {
+        &:hover,
+        &:focus {
+          background-color: $c-blue-h;
+        }
+      }
+    }
+  }
+}

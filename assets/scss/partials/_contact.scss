@@ -30,12 +30,15 @@
     &.big {
       @media all and ($tablet) {
         font-size: 22px;
+        @include content_heading_sizes(22px, 46px);
       }
       @media all and ($mobile) {
         font-size: 20px;
+        @include content_heading_sizes(20px, 36px);
       }
       @media all and ($mobile-small) {
         font-size: 18px;
+        @include content_heading_sizes(18px, 26px);
       }
     }
   }

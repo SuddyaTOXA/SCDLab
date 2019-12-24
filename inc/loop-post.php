@@ -2,7 +2,7 @@
 $title      = get_the_title();
 $url        = get_permalink();
 $btn_text  =  __('Read the project case study', 'scd-lab');
-$img_size  = 'large';
+$img_size  = 'medium_large';
 $img_id     = $img_data = $img_class = '';
 
 if ( has_post_thumbnail() ) {

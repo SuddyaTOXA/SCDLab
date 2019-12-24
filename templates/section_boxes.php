@@ -2,7 +2,7 @@
     $title      = trim(get_sub_field('title')) ? get_sub_field('title') : '';
     $desc       = trim(get_sub_field('description')) ? get_sub_field('description') : '';
     $boxes      = (get_sub_field('boxes') && is_array(get_sub_field('boxes')) && count(get_sub_field('boxes')) > 0 ) ? get_sub_field('boxes') : '';
-    $img_size   = 'medium';
+    $img_size   = 'medium_large';
 
 	if ($title || $desc || $boxes) :
 		?>

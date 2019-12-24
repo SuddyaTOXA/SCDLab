@@ -25,16 +25,34 @@
       margin-bottom: 0;
     }
   }
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 18px;
+    line-height: $line-height-heading;
+    @media all and ($tablet) {
+      line-height: 1.2;
+    }
+  }
+
+  @include content_heading_sizes($size-main, $size-heading2);
+  @media all and ($mobile-small) {
+    @include content_heading_sizes(18px, 28px);
+  }
+
+
   &.big {
     font-size: $size-big;
+    @include content_heading_sizes($size-big, $size-heading2);
     @media all and ($tablet) {
       font-size: 22px;
+      @include content_heading_sizes(22px, 48px);
     }
     @media all and ($mobile) {
       font-size: $size-big;
+      @include content_heading_sizes($size-big, 39px);
     }
     @media all and ($mobile-small) {
       font-size: 20px;
+      @include content_heading_sizes(20px, 28px);
     }
     * {
       //margin-bottom: 10px;
@@ -53,37 +71,7 @@
   i {
     font-style: italic;
   }
-  h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 18px;
-    line-height: $line-height-heading;
-    @media all and ($tablet) {
-      line-height: 1.2;
-    }
-  }
 
-  h1 {
-    font-size: 64px;
-  }
-
-  h2 {
-    font-size: 56px;
-  }
-
-  h3 {
-    font-size: 50px;
-  }
-
-  h4 {
-    font-size: 44px;
-  }
-
-  h5 {
-    font-size: 38px;
-  }
-
-  h6 {
-    font-size: 32px;
-  }
   a {
     color: $color-text;
     @media all and ($start-hover) {
@@ -121,7 +109,7 @@
     margin-right: 5%;
     text-align: left;
     padding-left: 20px;
-    border-left: 4px solid #737373;
+    border-left: 4px solid $c-blue;
     @media all and (max-width: 480px) {
       margin-left: 0;
       margin-right: 0;
@@ -166,30 +154,6 @@
       display: block;
       margin: 0 auto 12px;
       clear: both;
-    }
-  }
-  .section & {
-    * {
-      //margin-bottom: 10px;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-bottom: 5px;
-      font-family: $font-secondary;
-      font-size: 26px;
-      font-weight: $bold;
-      text-transform: uppercase;
-    }
-    h2, h3, h4, h5, h6 {
-      font-size: 22px;
-    }
-  }
-  &.small {
-    font-size: 26px;
-    * {
-      margin-bottom: 14px;
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
   }
 }

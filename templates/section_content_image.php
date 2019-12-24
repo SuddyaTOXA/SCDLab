@@ -1,7 +1,7 @@
 <?php
 	$content_box    = get_sub_field('content_box');
 	$img_box        = get_sub_field('img_box');
-    $img_size       = 'full';
+    $img_size       = '2048x2048';
     $title = $content = $buttons = $img_data = $img = $img_id = $img_class = $image_overlay = $image_type = $gradient_class = '';
 
 	if ($content_box && is_array($content_box) && count($content_box) > 0) {

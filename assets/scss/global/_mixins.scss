@@ -48,8 +48,8 @@
 @mixin centered() {
   position: absolute;
   z-index: 3;
-  min-width: 100%;
-  min-height: 100%;
+  //min-width: 100%;
+  //min-height: 100%;
   width: auto;
   height: auto;
   top: -9999px;
@@ -64,4 +64,25 @@
 @mixin main-item-hovered {
   max-height: 15px;
   transition: max-height 0.35s ease-in;
+}
+
+@mixin content_heading_sizes($size-min: 20px, $size-max: 56px) {
+  h1 {
+    font-size: $size-max;
+  }
+  h2 {
+    font-size: $size-min + ((($size-max - $size-min) / 5) * 4);
+  }
+  h3 {
+    font-size: $size-min + ((($size-max - $size-min) / 5) * 3);
+  }
+  h4 {
+    font-size: $size-min + ((($size-max - $size-min) / 5) * 2);
+  }
+  h5 {
+    font-size: $size-min + ((($size-max - $size-min) / 5) * 1);
+  }
+  h6 {
+    font-size: $size-min;
+  }
 }

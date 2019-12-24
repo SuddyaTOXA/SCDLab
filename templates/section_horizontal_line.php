@@ -3,4 +3,3 @@
 
 	echo '<hr class="hr-line color-'.$hr_line_color.'">';
 
-
