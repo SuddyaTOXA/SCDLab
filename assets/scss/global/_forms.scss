@@ -16,6 +16,9 @@
   appearance: none;
   @include border-radius(0);
   @include transition($transition-other);
+  &.wpcf7-not-valid {
+    border-color: red;
+  }
 }
 .goo-form-wrap textarea.form-control,
 textarea.input-style {
