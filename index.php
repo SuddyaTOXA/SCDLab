@@ -3,7 +3,7 @@ get_header();
 
 get_template_part( 'templates/section', 'banner' );
 
-if (the_flexible_field('flexible_content')) :
+if (get_field('flexible_content')) :
 
 	while ( the_flexible_field('flexible_content') ) :
 		get_template_part( 'templates/'. get_row_layout() );

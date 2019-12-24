@@ -1,5 +1,5 @@
 <?php
-	$hr_line_color = trim(get_sub_field('color')) ? get_sub_field('color') : 'blue';
+	$hr_line_color = get_sub_field('hr_color') ? get_sub_field('hr_color') : 'blue';
 
 	echo '<hr class="hr-line color-'.$hr_line_color.'">';
 
