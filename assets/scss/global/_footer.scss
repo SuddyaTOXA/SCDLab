@@ -31,6 +31,13 @@
     }
     a {
       color: $color-text3;
+      text-decoration: none;
+      @media all and ($start-hover) {
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
@@ -104,10 +111,10 @@
           padding-right: 2px;
           font-weight: $normal;
           text-transform: initial;
-          text-decoration: underline;
+          text-decoration: none;
           @media all and ($start-hover) {
             &:hover, &:focus {
-              text-decoration: none;
+              text-decoration: underline;
             }
           }
         }

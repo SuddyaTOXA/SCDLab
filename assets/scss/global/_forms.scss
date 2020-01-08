@@ -119,15 +119,18 @@ div.wpcf7-mail-sent-ok {
   overflow: hidden;
   margin-left: 0;
   margin-right: 0;
+  text-align: center;
 }
 //div.wpcf7-response-output {
 //  background-color: #ff0000;
 //}
 div.wpcf7-mail-sent-ok {
   background-color: green;
+  color: #fff;
 }
 div.wpcf7-validation-errors,
 div.wpcf7-acceptance-missing {
   border-color: yellow;
   background-color: yellow;
+  color: #000;
 }

@@ -189,7 +189,7 @@
 }
 
 .wpcf7-form-control-wrap {
-  &.your-stakeholders_other,
+  &.stakeholders_other,
   &.discovery-or-research_other {
     height: 0;
     visibility: hidden;
@@ -202,3 +202,11 @@
   }
 }
 
+.required-custom-text {
+  margin: -10px 0 18px;
+  font-size: .9em;
+  color: red;
+  //span {
+  //  color: red;
+  //}
+}

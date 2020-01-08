@@ -92,6 +92,7 @@ a.btn, .btn {
 }
 
 a.btn-small, .btn-small {
+  overflow: hidden;
   position: relative;
   display: inline-block;
   padding: 6px 0 9px;
@@ -106,18 +107,20 @@ a.btn-small, .btn-small {
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  @include css3-prefix('transition', '0s');
   span {
     &:after {
       position: absolute;
       content: '';
       width: 100%;
-      max-width: 1200px;
+      //max-width: 1200px;
       height: 3px;
-      left: 50%;
+      left: 0;
       bottom: 0;
       background-color: $c-gold;
-      @include css3-prefix('transform', 'translateX(-50%)');
-      @include css3-prefix('transition', 'max-width 0.35s ease-out');
+      //@include css3-prefix('transform', 'translateX(-50%)');
+      //@include css3-prefix('transition', 'max-width 0.35s ease-out');
+      @include css3-prefix('transition', 'all .8s cubic-bezier(.58,.3,.005,1)');
     }
   }
   @media all and ($start-hover) {
@@ -125,7 +128,8 @@ a.btn-small, .btn-small {
     &:focus {
       span {
         &:after {
-          max-width: 0;
+          //max-width: 0;
+          animation: slide-out-slide-in .8s cubic-bezier(.18,.43,.01,.96) 0s 1;
         }
       }
     }
@@ -135,3 +139,17 @@ a.btn-small, .btn-small {
   }
 }
 
+@keyframes slide-out-slide-in{
+  0% {
+    transform:translateX(0)
+  }
+  50% {
+    transform:translateX(100%)
+  }
+  50.02%{
+    transform:translateX(-100%)
+  }
+  to {
+    transform:translateX(0)
+  }
+}

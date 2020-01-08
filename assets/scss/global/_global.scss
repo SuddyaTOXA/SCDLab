@@ -57,6 +57,9 @@ a, .btn {
   width: 100%;
   margin: 0 auto;
   padding: 0 $gutter;
+  @media all and ($mobile-small) {
+    padding: 0 20px;
+  }
 }
 
 .vertical-align-box {
