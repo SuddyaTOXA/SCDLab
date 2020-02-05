@@ -31,7 +31,7 @@ add_action('wp_enqueue_scripts', 'load_style_script');
 // logo at the entrance to the admin panel
 function my_custom_login_logo(){
     echo '<style type="text/css">
-    h1 a {height:142px !important; width:190px !important; background-size:contain !important; background-image:url('.get_bloginfo("template_url").'/img/logo.png) !important;}
+    h1 a {height:50px !important; width:280px !important; background-size:contain !important; background-image:url('.get_bloginfo("template_url").'/img/logo@2x.png) !important;}
     </style>';
 }
 add_action('login_head', 'my_custom_login_logo');
@@ -189,4 +189,9 @@ function wpse_wp_nav_menu_objects( $sorted_menu_items, $args  ) {
 	return $sorted_menu_items;
 }
 
+//add date shortcode
+function insert_date_shortcode() {
+	return date(get_option('date_format'));
+}
 
+add_shortcode( 'date', 'insert_date_shortcode' );

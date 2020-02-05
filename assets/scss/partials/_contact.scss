@@ -13,7 +13,7 @@
   }
   .section-title {
     margin-bottom: 28px;
-    max-width: 700px;
+    //max-width: 700px;
     @media all and ($tablet) {
       font-size: 46px;
     }
@@ -45,13 +45,7 @@
 }
 
 .section-form {
-  padding: 28px 0 200px;
-  @media all and ($laptop) {
-    padding-bottom: 150px;
-  }
-  @media all and ($mobile) {
-    padding-bottom: 100px;
-  }
+  padding: 28px 0 72px;
 }
 
 .form-wrap {

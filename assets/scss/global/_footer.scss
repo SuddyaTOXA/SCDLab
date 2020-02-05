@@ -107,8 +107,8 @@
           }
         }
         a {
-          padding-left: 2px;
-          padding-right: 2px;
+          padding-left: 5px;
+          padding-right: 5px;
           font-weight: $normal;
           text-transform: initial;
           text-decoration: none;
@@ -116,6 +116,11 @@
             &:hover, &:focus {
               text-decoration: underline;
             }
+          }
+        }
+        &:first-child {
+          a {
+            padding-left: 2px;
           }
         }
       }

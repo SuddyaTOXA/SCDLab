@@ -15,7 +15,7 @@ if (($title && !$show_hero) || $content) :
 						echo '<h1 class="section-title">'.$title.'</h1>';
 
 					if ($content)
-						echo '<div class="content big">'.str_replace(']]>', ']]&gt;',apply_filters( 'the_content', $content )).'</div>';
+						echo '<div class="content">'.str_replace(']]>', ']]&gt;',apply_filters( 'the_content', $content )).'</div>';
 				?>
 			</div>
 		</section>

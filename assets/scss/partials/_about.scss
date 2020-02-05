@@ -1,0 +1,31 @@
+.section-about {
+  .section-title {
+    max-width: 880px;
+    @media all and ($tablet) {
+      max-width: 100%;
+    }
+  }
+  .content {
+    max-width: 645px;
+    @media all and ($tablet) {
+      max-width: 100%;
+    }
+  }
+  .content-img-box {
+    float: right;
+    max-width: 370px;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    @media all and ($mobile) {
+      float: none;
+      max-width: 100%;
+      padding-left: 0;
+    }
+    img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+}

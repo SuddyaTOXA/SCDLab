@@ -377,18 +377,18 @@
       }
       .hero-other-img {
         position: absolute;
-        left: 175px;
+        left: 78px;
         bottom: 70px;
         display: block;
         max-width: 1055px;
         @media all and (max-width: 1800px) {
-          max-width: 800px;
+          max-width: 932px;
         }
         @media all and (max-width: 1500px) {
-          max-width: 700px;
-          left: 100px;
+          max-width: 777px;
         }
         @media all and (max-width: 1280px) {
+          max-width: 720px;
           left: 50px;
         }
         @media all and ($laptop) {
@@ -455,10 +455,46 @@
     }
   }
 
+  &.hero:not(.hero-main) {
+    min-height: 745px;
+    @media all and (max-width: 1800px) {
+      min-height: 670px;
+    }
+    @media all and (max-width: 1500px) {
+      min-height: 600px;
+    }
+    @media all and ($laptop) {
+      min-height: 520px;
+    }
+    .content-box {
+      position: absolute;
+      top: 50%;
+      margin-top: -28px;
+      @include css3-prefix('transform', 'translateY(-50%)');
+      @media all and ($laptop) {
+        position: relative;
+        top: auto;
+        margin-top: 0;
+        @include css3-prefix('transform', 'none');
+      }
+    }
+    .content {
+      max-width: 455px;
+      @media all and ($tablet) {
+        max-width: 412px;
+      }
+      @media all and ($mobile) {
+        max-width: 100%;
+      }
+    }
+  }
+
   & + .section-article-list {
-    padding-top: 72px;
+    padding-top: 100px;
+    padding-bottom: 168px;
     @media all and ($mobile) {
       padding-top: 38px;
+      padding-bottom: 72px;
     }
   }
 }
