@@ -11,10 +11,10 @@
         $current_year = date("Y");
         $copyright = '';
 
-        if ($current_year > 2019) {
-            $copyright = '© Copyright 2019 - '.$current_year. ' by <a href="#" title="Foundation for California Community Colleges">Foundation for California Community Colleges</a>';
+        if ($current_year > 2020) {
+            $copyright = '© Copyright 2020 - '.$current_year. ' by <a href="#" title="Foundation for California Community Colleges">Foundation for California Community Colleges</a>';
         } else {
-            $copyright = '© Copyright 2019 by <a href="#" title="Foundation for California Community Colleges">Foundation for California Community Colleges</a>';
+            $copyright = '© Copyright 2020 by <a href="#" title="Foundation for California Community Colleges">Foundation for California Community Colleges</a>';
         }
         ?>
 

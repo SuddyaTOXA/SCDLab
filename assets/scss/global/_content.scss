@@ -73,11 +73,11 @@
   }
 
   a {
-    color: $color-text;
+    color: $color-text2;
     @media all and ($start-hover) {
       &:hover,
       &:focus {
-        opacity: .8;
+        //opacity: .8;
         text-decoration: none;
       }
     }

@@ -15,17 +15,19 @@
 		?>
         <section class="section-two-columns">
             <div class="container">
+	            <?php
+                    if ($title)
+                        echo '<h2 class="section-title">'.$title.'</h2>';
+	            ?>
                 <div class="columns-wrap">
-                    <?php if ($title || $img_id) : ?>
+                    <?php if ($img_id) : ?>
                         <div class="column-box">
                             <div class="reverse-box">
+                                <?php echo '<div class="inner-box"> <div class="centered-img">'.wp_get_attachment_image($img_id, $img_size,false, array('class' => $img_class)).'</div></div>'; ?>
                                 <?php
                                     if ($title)
                                         echo '<div class="inner-box"><h2 class="section-title">'.$title.'</h2></div>';
-
-                                    if ($img_id)
-                                        echo '<div class="inner-box"> <div class="centered-img">'.wp_get_attachment_image($img_id, $img_size,false, array('class' => $img_class)).'</div></div>';
-                                    ?>
+                                ?>
                             </div>
                         </div>
                     <?php endif; ?>

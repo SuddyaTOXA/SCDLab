@@ -14,7 +14,7 @@
 	    $sc_class = 'blue-bg inverse';
     }
 
-	if ($title || $desc || $boxes) :
+	if ($title || $desc || $boxes || $row) :
 		?>
         <section class="section-lab-services <?php echo $sc_class; ?>">
             <div class="container">

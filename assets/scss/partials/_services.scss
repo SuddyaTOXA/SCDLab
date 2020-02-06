@@ -23,23 +23,41 @@
 
 .section-two-columns {
   padding: 32px 0 135px;
-  .container {}
+  .container {
+    > .section-title {
+      @media all and ($mobile) {
+        display: none;
+      }
+    }
+  }
   @media all and ($mobile) {
-    padding: 40px 0 120px;
+    padding: 0 0 40px;
+  }
+  .section-title {
+    margin-bottom: 36px;
   }
 }
   .columns-wrap {
     display: table;
     width: 100%;
     .section-title {
+      display: none;
       margin-bottom: 32px;
       @media all and ($mobile) {
+        display: block;
         margin-bottom: 0;
       }
     }
     .centered-img {
       -webkit-box-shadow: 6px 6px 0 rgba(0, 102, 186, 0.15);
       box-shadow: 6px 6px 0 rgba(0, 102, 186, 0.15);
+      @media all and ($mobile) {
+        margin: 0 -25px 34px;
+        width: -webkit-calc(100% + 50px);
+        width: calc(100% + 50px);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
     }
     .content {
       margin-bottom: 14px;
@@ -67,36 +85,36 @@
       &:nth-child(2) {
         &:last-child {
           padding-left: 30px;
-          padding-top: 14px;
+          //padding-top: 14px;
           @media all and ($mobile) {
             display: block;
             padding: 0;
           }
         }
       }
-      .reverse-box {
-        //.inner-box {}
-        @media all and ($mobile) {
-          display: table;
-          width: 100%;
-          .inner-box {
-            &:first-child {
-              &:nth-last-child(2) {
-                display: table-cell;
-                width: 100%;
-                padding-top: 32px;
-              }
-            }
-
-            &:nth-child(2) {
-              &:last-child {
-                display: table-header-group;
-                width: 100%;
-              }
-            }
-          }
-        }
-      }
+      //.reverse-box {
+      //  //.inner-box {}
+      //  @media all and ($mobile) {
+      //    display: table;
+      //    width: 100%;
+      //    .inner-box {
+      //      &:first-child {
+      //        &:nth-last-child(2) {
+      //          display: table-cell;
+      //          width: 100%;
+      //          padding-top: 32px;
+      //        }
+      //      }
+      //
+      //      &:nth-child(2) {
+      //        &:last-child {
+      //          display: table-header-group;
+      //          width: 100%;
+      //        }
+      //      }
+      //    }
+      //  }
+      //}
       @media all and ($mobile) {
         & + .column-box {
 
