@@ -556,9 +556,21 @@
         }
         .blockquote-author {
           text-align: right;
+          @media all and ($mobile) {
+            text-align: left;
+          }
         }
       }
       >:first-child:not(:last-child) {
+        width: 290px;
+        .blockquote-author {
+          display: none;
+          @media all and ($mobile) {
+            display: block;
+            margin-top: 12px;
+            margin-left: 0;
+          }
+        }
         @media all and ($mobile) {
           .blockquote-author {
             display: none;
@@ -567,18 +579,23 @@
       }
       >:nth-child(2):last-child {
         padding-left: 25px;
-        text-align: right;
+        text-align: left;
         @media all and ($mobile) {
-          margin-top: 28px;
+          margin-top: 124px;
           padding-left: 0;
           text-align: left;
         }
-        .blockquote-author {
-          display: none;
+        .blockquote-box .content:before {
+          left: -33px;
           @media all and ($mobile) {
-            display: block;
-            margin-top: 12px;
-            margin-left: 0;
+            left: 5px;
+            top: -102px;
+          }
+        }
+        .blockquote-box .content .quote-icon:after {
+          left: -83px;
+          @media all and ($mobile) {
+            left: -55px;
           }
         }
       }
@@ -685,6 +702,7 @@
       }
       @media all and ($mobile) {
         font-size: $size-big;
+        margin-left: 0;
       }
       @media all and ($mobile-small) {
         font-size: 20px;

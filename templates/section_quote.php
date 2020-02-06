@@ -21,6 +21,25 @@
 			<div class="container">
 				<div class="blockquote-wrap">
 					<div class="blockquote-table">
+						<?php if ($img_id) { ?>
+                            <div class="inner-box">
+								<?php if ($img_id) { ?>
+                                    <div class="blockquote-photo-img centered-img" data-centered-img>
+										<?php echo wp_get_attachment_image($img_id, $img_size,false, array('class' => $img_class)); ?>
+                                    </div>
+								<?php } ?>
+								<?php if ($name || $position) { ?>
+                                    <div class="blockquote-author">
+										<?php if ($name) { ?>
+                                            <span class="name">– <?php echo $name; ?></span>
+										<?php } ?>
+										<?php if ($position) { ?>
+                                            <span class="position"><?php echo $position; ?></span>
+										<?php } ?>
+                                    </div>
+								<?php } ?>
+                            </div>
+						<?php } ?>
 						<div class="inner-box">
 							<div class="blockquote-box">
 								<div class="content">
@@ -38,25 +57,6 @@
 								<?php } ?>
 							</div>
 						</div>
-						<?php if ($img_id) { ?>
-							<div class="inner-box">
-								<?php if ($img_id) { ?>
-									<div class="blockquote-photo-img centered-img" data-centered-img>
-										<?php echo wp_get_attachment_image($img_id, $img_size,false, array('class' => $img_class)); ?>
-									</div>
-								<?php } ?>
-								<?php if ($name || $position) { ?>
-									<div class="blockquote-author">
-										<?php if ($name) { ?>
-											<span class="name">– <?php echo $name; ?></span>
-										<?php } ?>
-										<?php if ($position) { ?>
-											<span class="position"><?php echo $position; ?></span>
-										<?php } ?>
-									</div>
-								<?php } ?>
-							</div>
-						<?php } ?>
 					</div>
 				</div>
 			</div>
